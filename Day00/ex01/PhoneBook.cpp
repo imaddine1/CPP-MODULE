@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:37:05 by iharile           #+#    #+#             */
-/*   Updated: 2022/11/15 20:23:38 by iharile          ###   ########.fr       */
+/*   Updated: 2022/11/16 13:05:22 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ int	take_number()
 {
 	std::string selected;
 
-	std::cout << "You can enter just one element from the list below\n";
-	std::cout << "1.ADD\n";
-	std::cout << "2.SEARCH\n";
-	std::cout << "3.EXIT\n";
-	std::cout << "Enter here: ";
+	std::cout << "\033[0;34mChose from the list below:\033[0m\n";
+	std::cout << " \033[0;33m1.ADD\033[0m\n";
+	std::cout << " \033[0;33m2.SEARCH\033[0m\n";
+	std::cout << " \033[0;33m3.EXIT\033[0m\n";
+	std::cout << " \033[0;33mEnter here: \033[0m";
 	if (!std::getline(std::cin, selected))
 		exit(1);
 	if (!selected.compare("ADD"))
@@ -33,32 +33,79 @@ int	take_number()
 	else if (!selected.compare("EXIT"))
 		return (3);
 	else
-		std::cout << "You entered somthing that not in the list, Try again\n";
+		return (0);
 	return (0);
 }
 
+int	isEmpty(std::string str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] && str[i] == ' ')
+		i++;
+	if (!str.length() || i == (int)str.length())
+	{
+		std::cout << "\033[0;31mEmpty field not allowed\033[0m\n";
+		return (0);
+	}
+	return (1);
+}
 
 void	PhoneBook::add()
 {
 	std::string fn;
 	std::string	ln;
 	std::string	nk;
-	std::string	nb;			
+	std::string	nb;
+	std::string	ds;		
 	static int	i;
 	int			j;
 
 	if (i > 7)
-		i = 7;
-	std::cout << "First Name !\n";
-	std::getline(std::cin, fn);
-	std::cout << "Last Name !\n";
-	std::getline(std::cin, ln);
-	std::cout << "Nick Name !\n";
-	std::getline(std::cin, nk);
-	std::cout << "Number Phone !\n";
-	std::getline(std::cin, nb);
+		i = 0;
+	while (true)
+	{
+		std::cout << "\033[0;35mFirst Name !\033[0m\n";
+		if (!std::getline(std::cin, fn))
+			exit (1);
+		if (isEmpty(fn))
+			break ;
+	}
+	while (true)
+	{
+		std::cout << "\033[0;35mLast Name !\033[0m\n";
+		if (!std::getline(std::cin, ln))
+			exit (1);
+		if (isEmpty(ln))
+			break;
+	}
+	while (true)
+	{
+		std::cout << "\033[0;35mNick Name !\033[0m\n";
+		if(!std::getline(std::cin, nk))
+			exit(1);
+		if (isEmpty(nk))
+			break ;
+	}
+	while (true)
+	{
+		std::cout << "\033[0;35mNumber Phone !\033[0m\n";
+		if (!std::getline(std::cin, nb))
+			exit (1);
+		if (isEmpty(nb))
+			break;
+	}
+	while (true)
+	{
+		std::cout << "\033[0;35mdarkest secret !\033[0m\n";
+		if (!std::getline(std::cin, ds))
+			exit (1);
+		if (isEmpty(ds))
+			break ;
+	}
 	j = i;
-	contact[i++].set_info(fn, ln, nk, nb, j);
+	contact[i++].set_info(fn, ln, nk, nb, j, ds);
 }
 
 
@@ -66,30 +113,39 @@ void	PhoneBook::search()
 {
 	std::string	number;
 	int			no;
+	int			i;
 
-	while (1)
+	i = 0;
+	no = 0;
+	while (i < 8)
 	{
-		std::cout << "Enter Your index !!\n";
-		std::getline(std::cin, number);
-		int i = 0;
-		while (i < 8)
-		{
-			int ok = contact[i].get_index();
-			if (ok > -1)
-				i++;
-			else
-				break;
-		}
-		no = std::stoi(number);
-		if (no >= 0 && no < i)
-			contact[no].get_display();
+		if (contact[i].get_index() > -1)
+			i++;
 		else
-		{
-			std::cout << "You entred somthing not in phonebook\n";
 			break ;
-		}
 	}
+	if (i == 0)
+	{
+		std::cout << "there is nothing to display!!\n";
+		return ;
+	}
+	while (no < i)
+	{
+		contact[no].get_display();
+		std::cout << "\n";
+		no++;
+	}
+	std::cout << "Enter The index:: ";
+	std::getline(std::cin, number);
 	
+	if (number.length() > 1)
+		no = -1;
+	else
+		no = number[0] - 48;
+	if (no >= 0 && no < i)
+		contact[no].get_by_index();
+	else
+		std::cout << "\033[0;31mthis index is out of range or wrong\033[0m\n";
 }
 
 int	main()
@@ -107,10 +163,7 @@ int	main()
 		else if (selected == 2)
 			phonebook.search();
 		else
-		{
-			std::cout << "You entred somthing not in the LIST??\n";
-			break ;
-		}
+			std::cout << "\033[0;31mYou entred somthing not in the LIST??\033[0m\n";
 	}
 	return (0);
 }
