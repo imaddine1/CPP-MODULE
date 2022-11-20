@@ -1,7 +1,7 @@
 #ifndef __ZOMBIE_H__
 #define __ZOMBIE_H__
 #include <iostream>
-
+// idk why there is no leak in randoChump even i don't use systel ("leaks zombie");
 class Zombie
 {
 private:

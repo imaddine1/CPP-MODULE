@@ -1,5 +1,5 @@
-NAME = zombie
-SRC =  main.cpp Zombie.cpp newZombie.cpp randomChump.cpp 
+NAME = GrpZombie
+SRC =  main.cpp Zombie.cpp ZombieHorde.cpp
 CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 OBJ = $(SRC:.cpp=.o)
 
