@@ -1,17 +1,16 @@
 #include "Zombie.hpp"
 
-Zombie::Zombie()
+void	Zombie::announce(void)
 {
-	std::cout << "the default constructor is called\n";
+	std::cout << name << " is created\n";
 }
 
-Zombie::~Zombie()
+Zombie::Zombie()
 {
-	std::cout << "the deconstructor is called\n";
+
 }
 
 Zombie::Zombie(std::string name)
 {
 	this->name = name;
 }
-

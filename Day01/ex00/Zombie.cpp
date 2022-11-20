@@ -17,5 +17,5 @@ Zombie::Zombie(std::string name)
 
 void	Zombie::announce(void)
 {
-	std::cout << "The name of zombie is " << name << std::endl;
+	std::cout << name << ": BraiiiiiiinnnzzzZ...\n";
 }

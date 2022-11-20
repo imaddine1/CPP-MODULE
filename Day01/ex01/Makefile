@@ -1,5 +1,5 @@
 NAME = GrpZombie
-SRC =  main.cpp Zombie.cpp ZombieHorde.cpp
+SRC =  main.cpp Zombie.cpp zombieHorde.cpp
 CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 OBJ = $(SRC:.cpp=.o)
 
