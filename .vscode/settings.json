@@ -52,6 +52,9 @@
 		"utility": "cpp",
 		"iomanip": "cpp",
 		"__split_buffer": "cpp",
-		"vector": "cpp"
+		"vector": "cpp",
+		"deque": "cpp",
+		"fstream": "cpp",
+		"stack": "cpp"
 	}
 }
