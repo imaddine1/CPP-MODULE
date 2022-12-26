@@ -1,13 +1,9 @@
 #include "ClapTrap.hpp"
 
-// default function of class
+// orthodox canonical class form
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap():Hit(10),Energy(10),Attack_Damage(5)
 {
-	this->name = "Unknown";
-	this->Hit = 10;
-	this->Energy = 10;
-	this->Attack_Damage = 0;
 	std::cout << "Default constructor is called\n";
 }
 
@@ -64,9 +60,14 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout << "repaire button is clicked\n";
-	this->Hit += amount;
-	this->Energy--;
+	if (this->Energy > 0)
+	{
+		std::cout << "repaire button is clicked\n";
+		this->Hit += amount;
+		this->Energy--;
+	}
+	else
+		std::cout << "i can't repair cause im run out of my energy\n";
 }
 // optional funtion for test
 std::string ClapTrap::get_points() const
