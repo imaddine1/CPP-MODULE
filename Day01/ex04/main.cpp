@@ -24,18 +24,13 @@ int	main(int ac, char **av)
 		std::cout << "\033[0;31m three \033[0;33margument\033[0m \033[0;31mare requiered not more not less!!\033[0m\033[0m\n";
 		return (0);
 	}
-	if (!av[2] || !av[3])
-	{
-		std::cout << "\033[0;31m you have empty arguments\033[0m\n";
-	}
 	in.open(av[1], std::ios::in);
+	s2 = av[1];
 	if (!in)
 	{
-		s2 = av[1];
 		std::cout << "\x1b[30m" + s2 << "\x1b[0m" << "\033[0;31m not found !! \033[0m\n";
 		return (0);
 	}
-	s2 = av[1];
 	s2 += ".replace";
 	out.open(s2, std::ios::out);
 	if (!out)

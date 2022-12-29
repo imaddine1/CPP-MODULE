@@ -12,6 +12,7 @@ Zombie::~Zombie()
 
 Zombie::Zombie(std::string name)
 {
+	std::cout << "parametrized constructor is called\n";
 	this->name = name;
 }
 
