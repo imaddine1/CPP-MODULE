@@ -6,10 +6,14 @@ class Animal
 	protected:
 		std::string type;
 	public:
+	// OCCF
 	Animal(void);
 	Animal(const Animal& an);
-	const Animal& operator=(const Animal& an);
+	Animal& operator=(const Animal& an);
 	~Animal(void);
+	// REQUIRED FUNCTION
+	virtual void	makeSound() const;
+	std::string getType() const; 
 };
 
 #endif

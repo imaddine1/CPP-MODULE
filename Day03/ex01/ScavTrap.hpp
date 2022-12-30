@@ -14,7 +14,7 @@ public:
 	ScavTrap(const ScavTrap& st);
 	ScavTrap& operator=(const ScavTrap& st);
 	~ScavTrap();
-};
+} ;
 
 
 #endif

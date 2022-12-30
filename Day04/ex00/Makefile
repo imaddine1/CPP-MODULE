@@ -1,5 +1,5 @@
 NAME = virtual
-SRC =  main.cpp Animal.cpp Cat.cpp Dog.cpp
+SRC =  main.cpp Animal.cpp  Dog.cpp Cat.cpp
 CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 OBJ = $(SRC:.cpp=.o)
 

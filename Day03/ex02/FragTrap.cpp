@@ -13,7 +13,6 @@ void	FragTrap::highFivesGuys(void)
 	std::cout << "i don't know what should i display here\n";
 }
 
-
 //orthodox canonical class form
 FragTrap::FragTrap(void)
 {
@@ -37,7 +36,7 @@ FragTrap::FragTrap(const FragTrap& st)
 
 FragTrap& FragTrap::operator=(const FragTrap& st)
 {
-	std::cout << "Copy assignment operator is called";
+	std::cout << "Copy assignment operator is called\n";
 	this->name = st.name;
 	this->Hit = st.Hit;
 	this->Energy = st.Energy;

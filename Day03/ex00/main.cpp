@@ -2,7 +2,7 @@
 
 int main()
 {
-	ClapTrap	ct("Sakuna");
+	ClapTrap	ct;
 
 	ct.attack("imad");
 	ct.takeDamage(5);

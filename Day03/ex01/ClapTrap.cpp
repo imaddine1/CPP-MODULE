@@ -2,7 +2,7 @@
 
 // default function of class
 
-ClapTrap::ClapTrap():Hit(10),Energy(10),Attack_Damage(5)
+ClapTrap::ClapTrap():Hit(10),Energy(10),Attack_Damage(0)
 {
 	std::cout << "Default constructor is called\n";
 }
@@ -29,7 +29,7 @@ ClapTrap::~ClapTrap()
 
 // The required function
 
-ClapTrap::ClapTrap(std::string name):Hit(10),Energy(10),Attack_Damage(5)
+ClapTrap::ClapTrap(std::string name):Hit(10),Energy(10),Attack_Damage(0)
 {
 	std::cout << "the parametherized constructor with name is called\n";
 	this->name = name;
