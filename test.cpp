@@ -4,24 +4,34 @@ class test
 {
 private:
 	std::string name;
+	int*		m_age;
 public:
-	int		age;
 	test()
 	{
 		std::cout << "Default constructor\n";
 	}
 	test(std::string name, int age)
 	{
+		this->m_age = new int;
+		std::cout << "parametrized constructor\n";
 		this->name = name;
-		this->age = age;
+		*(this->m_age) = age;
+	}
+	//copy constructor 
+	test(const test& t)
+	{
+		this->name = t.name;
+		this->m_age = new int;
+		*(this->m_age) = *t.m_age;
 	}
 	void	Display()
 	{
-		std::cout << this->name << std::endl;
-		std::cout << this->age << std::endl;
+		std::cout << (this->name) << std::endl;
+		std::cout << *(this->m_age) << std::endl;
 	}
 	~test()
 	{
+		delete m_age;
 		std::cout << "Destructor is called\n";
 	}
 };
@@ -82,24 +92,16 @@ public:
 };
 */
 
-void	a()
-{
-	test t1("imad", 22);
-	t1.Display();
-}
-
-void	b()
-{
-	test t1("hanma", 30);
-	t1.Display();
-}
 
 int	main()
 {
 
 	test t1("imad", 22);
-
-	t1 = t1;
 	t1.Display();
+	std::cout << "----------------------"<< std::endl;
+	test t2 = t1;
+	t2.Display();
+	
+	std::cout << "THIS IS END\n";
 	return (0);
 }
