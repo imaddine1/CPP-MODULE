@@ -3,36 +3,36 @@
 
 Fixed::Fixed():fpoint(0)
 {
-	//std::cout << "Default constructor called\n";
+	std::cout << "Default constructor called\n";
 }
 
 Fixed::Fixed(Fixed const& f)
 {
-	//std::cout << "Copy constructor called\n";
+	std::cout << "Copy constructor called\n";
 	*this = f;
 }
 
 Fixed::Fixed(const int integer)
 {
 	this->fpoint = integer << fractional;
-	//std::cout << "Int constructor called\n";
+	std::cout << "Int constructor called\n";
 }
 
 Fixed::Fixed(const float floating)
 {
 	this->fpoint = roundf(floating * (1 << this->fractional));
-	//std::cout << "Float constructor called\n";
+	std::cout << "Float constructor called\n";
 }
 
 Fixed&	Fixed::operator=(const Fixed& f)
 {
-	//std::cout << "Copy assigment operator called\n";
+	std::cout << "Copy assigment operator called\n";
 	fpoint = f.getRawBits();
 	return (*this);
 }
 int		Fixed::getRawBits() const
 {
-	//std::cout << "getRawBits member function called\n";
+	std::cout << "getRawBits member function called\n";
 	return (fpoint);
 }
 
@@ -59,7 +59,7 @@ std::ostream& operator<< (std::ostream& os, const Fixed &obj)
 
 Fixed::~Fixed()
 {
-	//std::cout << "Destructor called\n";
+	std::cout << "Destructor called\n";
 }
 
 // this is the start of ex02
@@ -117,7 +117,6 @@ Fixed	Fixed::operator*(const Fixed& f2)
 	Fixed	f;
 
 	f.fpoint = (this->fpoint * f2.fpoint) / (1 << this->fractional);
-	std::cout << f.fpoint << std::endl;
 	return (f);
 }
 
@@ -125,7 +124,6 @@ Fixed	Fixed::operator/(const Fixed& f2)
 {
 	Fixed f;
 
-	std::cout << (float)this->fpoint / (float)f2.fpoint << std::endl;
 	f.fpoint = (this->fpoint  * (1 << this->fractional) / f2.fpoint);
 	return (f);
 }
@@ -148,7 +146,7 @@ Fixed Fixed::operator++(int)
 {
 	Fixed	f (*this);
 
-	this->fpoint++;
+	this->fpoint += 1;
 	return (f);
 }
 
@@ -156,7 +154,7 @@ Fixed Fixed::operator--(int)
 {
 	Fixed	f (*this);
 
-	this->fpoint--;
+	this->fpoint -= 1;
 	return (f);
 }
 
@@ -188,7 +186,6 @@ Fixed& Fixed::max(Fixed& f1,  Fixed& f2)
 
 const Fixed& Fixed::max(const Fixed& f1, const Fixed& f2)
 {
-	std::cout << "You are using const max\n";
 	if (f1 > f2)
 		return (f1);
 	else
