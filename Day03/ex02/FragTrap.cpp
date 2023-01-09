@@ -10,14 +10,13 @@ FragTrap::FragTrap(std::string name)
 }
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "i don't know what should i display here\n";
+	std::cout << "positive high fives\n";
 }
 
 //orthodox canonical class form
 FragTrap::FragTrap(void)
 {
 	std::cout << "Default constructor of derived class is called\n";
-	this->name = "Unknown";
 	Hit = 100;
 	Energy = 100;
 	Attack_Damage = 30;

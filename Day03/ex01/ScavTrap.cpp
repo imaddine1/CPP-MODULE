@@ -5,7 +5,7 @@ void	ScavTrap::guardGate(void)
 	std::cout << "ScavTrap is now in Gate keeper mode\n";
 }
 
-ScavTrap::ScavTrap(std::string name)//:ClapTrap(name)
+ScavTrap::ScavTrap(std::string name)//:ClapTrap()
 {
 	std::cout << "Default paramethrized constructor\n";
 	this->name = name;
@@ -18,6 +18,10 @@ ScavTrap::ScavTrap(std::string name)//:ClapTrap(name)
 ScavTrap::ScavTrap(void)
 {
 	std::cout << "Default constructor of derived class is called\n";
+	this->name = name;
+	Hit = 100;
+	Energy = 50;
+	Attack_Damage = 20;
 }
 
 ScavTrap::~ScavTrap(void)
@@ -40,6 +44,3 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& st)
 	this->Attack_Damage = st.Attack_Damage;
 	return (*this);
 }
-
-
-

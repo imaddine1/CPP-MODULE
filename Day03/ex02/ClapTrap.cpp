@@ -1,15 +1,16 @@
 #include "ClapTrap.hpp"
 
-// default function of class
+// orthodox canonical class form
 
-ClapTrap::ClapTrap():Hit(10),Energy(10),Attack_Damage(5)
+ClapTrap::ClapTrap():Hit(10),Energy(10),Attack_Damage(0)
 {
-	std::cout << "Default constructor is called\n";
+	this->name = "Unkown";
+	std::cout << "ClaptTrap Default constructor is called\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap& copy)
 {
-	std::cout << "Copy constructor is called\n";
+	std::cout << "ClaptTrap Copy constructor is called\n";
 	*this = copy;
 }
 
@@ -24,15 +25,15 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& clap)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Default Destructor is called\n";
+	std::cout << "ClaptTrap Default Destructor is called\n";
 }
 
 // The required function
 
-ClapTrap::ClapTrap(std::string name):Hit(10),Energy(10),Attack_Damage(5)
+ClapTrap::ClapTrap(std::string _name):name(_name),Hit(10),Energy(10),Attack_Damage(0)
 {
-	std::cout << "the parametherized constructor with name is called\n";
-	this->name = name;
+	std::cout << "ClaptTrap paramthrized constructor is called\n";
+	//this->name = name;
 }
 
 void	ClapTrap::attack(const std::string& target)
@@ -51,6 +52,8 @@ void	ClapTrap::attack(const std::string& target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
+	if (amount > Hit)
+		amount = Hit;
 	std::cout << "im hit and i lose " << amount << " of points\n";
 	if (amount > this->Hit)
 		this->Hit = 0;
@@ -60,11 +63,15 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->Energy > 0)
+	unsigned long long int total = (unsigned long long int)amount + (unsigned long long int)Hit;
+	if (Energy > 0)
 	{
 		std::cout << "repaire button is clicked\n";
-		this->Hit += amount;
-		this->Energy--;
+		if (total > 100)
+			Hit = 100;
+		else
+			Hit += amount;
+		Energy--;
 	}
 	else
 		std::cout << "i can't repair cause im run out of my energy\n";
