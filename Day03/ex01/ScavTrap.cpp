@@ -7,7 +7,7 @@ void	ScavTrap::guardGate(void)
 
 ScavTrap::ScavTrap(std::string name)//:ClapTrap()
 {
-	std::cout << "Default paramethrized constructor\n";
+	std::cout << "ScavTrap Default paramethrized constructor\n";
 	this->name = name;
 	Hit = 100;
 	Energy = 50;
@@ -17,8 +17,7 @@ ScavTrap::ScavTrap(std::string name)//:ClapTrap()
 //orthodox canonical form class
 ScavTrap::ScavTrap(void)
 {
-	std::cout << "Default constructor of derived class is called\n";
-	this->name = name;
+	std::cout << "ScavTrap Default constructor of derived class is called\n";
 	Hit = 100;
 	Energy = 50;
 	Attack_Damage = 20;
@@ -26,12 +25,12 @@ ScavTrap::ScavTrap(void)
 
 ScavTrap::~ScavTrap(void)
 {
-	std::cout << "Default Destructor of derived class is called\n";
+	std::cout << "ScavTrap Default Destructor of derived class is called\n";
 }
 
 ScavTrap::ScavTrap(const ScavTrap& st)
 {
-	std::cout << "Default copy constructor is called\n";
+	std::cout << "ScavTrap Default copy constructor is called\n";
 	*this = st;
 }
 

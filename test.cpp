@@ -83,7 +83,7 @@ public:
 };
 
 
-class Derived: public Base
+class Derived: private Base
 {
 	int a;
 public:
@@ -123,5 +123,6 @@ public:
 
 int	main()
 {
+	Base	b;
 	return (0);
 }

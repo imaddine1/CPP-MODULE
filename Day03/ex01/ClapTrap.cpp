@@ -4,7 +4,7 @@
 
 ClapTrap::ClapTrap():Hit(10),Energy(10),Attack_Damage(0)
 {
-	this->name = "Unkown";
+	this->name = "Xmen";
 	std::cout << "ClapTrap Default constructor is called\n";
 }
 
