@@ -1,6 +1,6 @@
 NAME = deepCopy
 SRC =  main.cpp Animal.cpp  Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
-CPPFLAGS = -std=c++98 #-Wall -Wextra -Werror
+CPPFLAGS = -std=c++98 -Wall -Wextra -Werror 
 OBJ = $(SRC:.cpp=.o)
 
 

@@ -6,6 +6,8 @@ class Brain
 	private:
 		std::string ideas[100];
 	public:
+	void	get_ideas();
+	void	set_ideas();
 	// OCCF
 	Brain(void);
 	Brain(const Brain& an);

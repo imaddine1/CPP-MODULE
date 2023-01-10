@@ -8,7 +8,7 @@
 class Dog : public Animal
 {
 	private:
-	Brain*	Br;
+		Brain*	Br;
 	public:
 	//OCCF
 	Dog();

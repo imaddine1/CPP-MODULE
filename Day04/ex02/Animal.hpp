@@ -12,7 +12,7 @@ class Animal
 	Animal& operator=(const Animal& an);
 	virtual ~Animal(void);
 	// REQUIRED FUNCTION
-	virtual void	makeSound() const = 0;
+	virtual void	makeSound() const = 0; // pure virtual function
 	std::string getType() const; 
 };
 

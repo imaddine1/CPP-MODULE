@@ -7,8 +7,8 @@
 class Cat : public Animal
 {
 	private:
+		Brain* Br;
 	public:
-	Brain* Br;
 	//OCCF
 	Cat();
 	Cat(const Cat& d);
@@ -16,6 +16,8 @@ class Cat : public Animal
 	virtual ~Cat();
 	// REQUIRED FUNCTION
 	void	makeSound() const;
+	// for test
+	void display() const;
 };
 
 

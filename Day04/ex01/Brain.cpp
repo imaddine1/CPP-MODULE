@@ -1,5 +1,24 @@
 #include "Brain.hpp"
 
+void    Brain::set_ideas()
+{
+    for (int i = 0; i < 100; i++)
+    {
+        ideas[i] = "word_" + std::to_string(i + 1);
+    }
+}
+
+void Brain::get_ideas()
+{
+    for (int i = 0; i < 100; i++)
+    {
+        std::cout << ideas[i] << std::endl;
+    }
+}
+
+
+
+//OCCF
 Brain::Brain(void)
 {
     std::cout << "Brain Default constructor\n";
