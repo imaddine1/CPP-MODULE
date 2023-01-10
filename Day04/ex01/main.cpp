@@ -24,5 +24,6 @@ int main()
         delete arr[i];
         i++;
     }
+    system ("leaks deepCopy");
     return 0;
 }

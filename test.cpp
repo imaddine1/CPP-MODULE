@@ -83,7 +83,7 @@ public:
 };
 
 
-class Derived: private Base
+class Derived: public Base
 {
 	int a;
 public:
@@ -102,7 +102,7 @@ public:
 	 ~Derived() {std::cout << "Derived Destructor\n";}
 };
 
-/*
+
 class Derived_sec: public Derived
 {
 	int a;
@@ -118,11 +118,13 @@ public:
     int getValueDoubled() const { return m_value * 2; }
 	std::string check()  {return "this is Derived_sec\n";}
 };
-*/
+
 
 
 int	main()
 {
-	Base	b;
+	Derived_sec s(10);
+
+	std::cout << s.getValue() <<std::endl;
 	return (0);
 }
