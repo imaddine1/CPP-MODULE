@@ -96,9 +96,9 @@ public:
 		this->m_value = value;
     }
 
-    std::string getName()  const  { return "Derived\n"; }
+    // std::string getName()  const  { return "Derived\n"; }
     int getValueDoubled() const { return m_value * 2; }
-	virtual std::string check()  {return ("this is Derived\n");}
+	//virtual std::string check()  {return ("this is Derived\n");}
 	 ~Derived() {std::cout << "Derived Destructor\n";}
 };
 
@@ -114,7 +114,7 @@ public:
 		m_value = value;
     }
 
-    std::string getName() const { return "Derived_sec\n"; }
+    std::string getName() const;// { return "Derived_sec\n"; }
     int getValueDoubled() const { return m_value * 2; }
 	std::string check()  {return "this is Derived_sec\n";}
 };
@@ -123,8 +123,10 @@ public:
 
 int	main()
 {
-	Derived_sec s(10);
-
-	std::cout << s.getValue() <<std::endl;
+    Derived_sec d;
+	Derived b = d;
+    std::cout << "**************\n";
+    std::cout << b.getName();
+    std::cout << "***************\n";
 	return (0);
 }
