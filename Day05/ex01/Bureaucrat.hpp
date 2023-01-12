@@ -2,7 +2,7 @@
 #define BUREAUCRAT_HPP
 #include <iostream>
 #include <exception>
-
+#include "Form.hpp"
 
 class Bureaucrat 
 {
@@ -35,7 +35,8 @@ class Bureaucrat
 	void        decrement();
 	//add function to test is grade valid
 	void        check_grade();
-		//Excecption
+	// ADDED FOR EX01
+	//void	signForm(const Form& f);
 };
 // operator overloading of insertion
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& b);
