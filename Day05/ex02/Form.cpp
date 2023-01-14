@@ -37,7 +37,7 @@ const char* Form::GradeTooLowExcetpion::what() const throw()
     return ("this grade is Too Low\n");
 }
 
-void    Form::beSigned(const Bureaucrat& b)
+void    Form::beSigned(Bureaucrat& b)
 {
     if (b.getGrade() > _gradeTosign)
         throw Bureaucrat::GradeTooLowException();
@@ -50,7 +50,7 @@ bool    Form::get_signed()
     return (_signed);
 }
 
-std::string Form::get_name()
+std::string Form::get_name() const
 {
     return (_name);
 }
@@ -63,4 +63,16 @@ Form::Form(const std::string name, const long long gradeTosign, const long long 
         throw Bureaucrat::GradeTooHighException();
     else if (gradeTosign > 150)
         throw Bureaucrat::GradeTooLowException();
+}
+
+// function for ex02
+void    Form::execute(Bureaucrat const& executor) const
+{
+    (void)executor;
+    std::cout << "this function will never execute here, ask why\n";
+}
+
+short   Form::get_gradeToExec()
+{
+    return (_gradeToExec);
 }

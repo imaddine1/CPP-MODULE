@@ -1,5 +1,4 @@
 #include "Bureaucrat.hpp"
-
 // ****************** create orthodox canonical form ****************
 
 Bureaucrat::Bureaucrat()
@@ -98,4 +97,11 @@ void    Bureaucrat::signForm(Form& f)
     {
          std::cout << this->name << " couldn't sign " << f.get_name() << " because my grade is too tow" << std::endl;
     }
+}
+
+// ADDED FOR EX02
+void    Bureaucrat::executeForm(Form const& form)
+{
+    form.execute(*this);
+    std::cout << this->getName() << " executed " << form.get_name() << std::endl;
 }

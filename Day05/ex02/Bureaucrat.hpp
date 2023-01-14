@@ -3,8 +3,10 @@
 #include <iostream>
 #include <exception>
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 class Form;
+class ShrubberyCreationform;
 
 class Bureaucrat 
 {
@@ -37,6 +39,8 @@ class Bureaucrat
 	void        decrement();
 	// ADDED FOR EX01
 	void	signForm(Form& f);
+	// ADDED FOR EX02
+	void	executeForm(Form const& form);
 };
 // operator overloading of insertion
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& b);

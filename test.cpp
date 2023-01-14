@@ -128,5 +128,6 @@ int	main()
     std::cout << "**************\n";
     std::cout << b.getName();
     std::cout << "***************\n";
+
 	return (0);
 }

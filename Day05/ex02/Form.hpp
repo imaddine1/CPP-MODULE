@@ -17,7 +17,7 @@ public:
     Form();
     Form(const Form& f);
     const Form& operator=(const Form& f);
-    ~Form();
+    virtual ~Form();
     // parametherized constructor
     Form(const std::string, const long long, const long long);
     // the nested Class GradeTooHighException
@@ -34,11 +34,16 @@ public:
     };
 
     // Required function
-    void    beSigned(const Bureaucrat& b);
+    void    beSigned(Bureaucrat& b);
 
     //getter
     bool    get_signed();
-    std::string get_name();
+    virtual    std::string get_name() const;
+    // function required from ex02
+    virtual void    execute(Bureaucrat const& excecutor) const = 0;
+
+    //additonal function for exercise to work very well
+    short   get_gradeToExec();
 };
 
 std::ostream& operator<<(std::ostream& out, const Form& f);
