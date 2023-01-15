@@ -6,10 +6,13 @@ void    test()
 {
    try
    {
+    Bureaucrat b("Alex", 4);
     Intern  someRandomeIntern;
     Form*   rrf;
     rrf = someRandomeIntern.makeForm("robotomy request", "Bender");
-    std::cout << rrf->get_name() << std::endl;
+    b.signForm(*rrf);
+    b.executeForm(*rrf);
+    std::cout << *rrf;
     delete rrf;
    }
    catch(const std::exception& e)
@@ -21,7 +24,7 @@ void    test()
 int main()
 {
     test();
-    //system("leaks intern");
+   //system("leaks intern");
     std::cout << "********* END OF MAIN ********\n";
     return (0);
 }

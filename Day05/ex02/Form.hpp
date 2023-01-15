@@ -29,7 +29,7 @@ public:
     Form();
     Form(const Form& f);
     const Form& operator=(const Form& f);
-    ~Form();
+    virtual ~Form();
     // parametherized constructor
     Form(const std::string, const long long, const long long);
 

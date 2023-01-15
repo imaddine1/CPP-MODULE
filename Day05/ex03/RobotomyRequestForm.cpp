@@ -1,23 +1,22 @@
 #include "RobotomyRequestForm.hpp"
 
 // OCCF
-RobotomyRequestForm::RobotomyRequestForm()
+RobotomyRequestForm::RobotomyRequestForm(): Form("Robotomy Request", 72, 45)
 {
+    target = "Default";
     std::cout << "Robot Default constructor\n";
-    name = "Defuatl Robot";
-    sign = 1;
-    exec = 1;
 }
+
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& Sh)
 {
     std::cout << "Robot copy constructor\n";
     *this = Sh;
 }
-const RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& Sh)
+
+RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& Sh)
 {
     std::cout << "Robot assignment operator\n";
-    sign = Sh.sign;
-    exec = Sh.exec;
+    target = Sh.target;
     return (*this);
 }
 
@@ -26,27 +25,26 @@ RobotomyRequestForm::~RobotomyRequestForm()
     std::cout << "Robot Default Destructor\n";
 }
 // param constructor that take target
-RobotomyRequestForm::RobotomyRequestForm(std::string target)
+RobotomyRequestForm::RobotomyRequestForm(std::string target):Form("Robotomy Request", 72, 45)
 {
+    this->target = target;
     std::cout << "Robot param constructor\n";
-    name = target;
-    sign = 72;
-    exec = 45;
 }
-//getter
-std::string RobotomyRequestForm::get_name() const
+
+// Exception
+const char* RobotomyRequestForm::invalidRobot::what() const throw()
 {
-    return (name);
+    return ("ther grade of bereaucrat is not high enough to execute it\n");
 }
 
 void    RobotomyRequestForm::execute(Bureaucrat const& executor) const
 {
-    if (executor.getGrade() > exec || executor.getGrade() > sign)
-          throw 1;
+    if ( get_signed() == false || executor.getGrade() > get_gradeToExec())
+          throw invalidRobot();
     srand(time(0));
     int i = rand() % 2;
     if (i)
         std::cout << "robotomy failed\n";
     else
-        std::cout << name << " has been robotomized\n";
+        std::cout << target << " has been robotomized\n";
 }

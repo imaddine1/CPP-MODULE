@@ -3,6 +3,7 @@
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 #include <cstdlib>
+#include <exception>
 
 class Bureaucrat;
 
@@ -11,6 +12,10 @@ class PresidentialPardonForm : public Form
 {
 private:
     std::string target;
+    class invalidPardon : public std::exception
+    {
+        const char* what() const throw();
+    };
 public:
     // OCCF
     PresidentialPardonForm();

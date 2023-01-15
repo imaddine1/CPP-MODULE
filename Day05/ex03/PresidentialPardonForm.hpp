@@ -3,6 +3,7 @@
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 #include <cstdlib>
+#include <exception>
 
 class Bureaucrat;
 
@@ -10,9 +11,11 @@ class Bureaucrat;
 class PresidentialPardonForm : public Form
 {
 private:
-    std::string name;
-    short       sign;
-    short       exec;
+    std::string target;
+    class invalidPardon : public std::exception
+    {
+        const char* what() const throw();
+    };
 public:
     // OCCF
     PresidentialPardonForm();
@@ -23,7 +26,6 @@ public:
     PresidentialPardonForm(std::string target);
     // required function
     void    execute(Bureaucrat const& executor) const;
-    std::string get_name() const;
 };
 
 

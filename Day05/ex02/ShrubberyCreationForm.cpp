@@ -1,7 +1,7 @@
 #include "ShrubberyCreationForm.hpp"
 
 // OCCF
-ShrubberyCreationForm::ShrubberyCreationForm():Form("Default Form", 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm():Form("Shrubbery Creation", 145, 137)
 {
     std::cout << "Shrubbery Default constructor\n";
     target = "Defuatl Shrubbery";
@@ -24,7 +24,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
     std::cout << "Shrubbery Default Destructor\n";
 }
 // param constructor that take target
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target):Form("Default Form", 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target):Form("Shrubbery Creation", 145, 137)
 {
     this->target = target;
     std::cout << "Shrubbery param constructor\n";
@@ -40,7 +40,7 @@ const char* ShrubberyCreationForm::invalidShrubbery::what() const throw()
 void    ShrubberyCreationForm::execute(Bureaucrat const& executor) const
 {
     // two function use this 
-    if (executor.getGrade() > get_gradeTosign() || executor.getGrade() > get_gradeToExec())
+    if ( get_signed() == false || executor.getGrade() > get_gradeToExec())
           throw invalidShrubbery();
 
     std::string tree = target; 

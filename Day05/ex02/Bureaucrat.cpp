@@ -5,7 +5,7 @@
 Bureaucrat::Bureaucrat():name("Default")
 {
     std::cout << "Bureaucrat Default constructor\n";
-    grade = 1;
+
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat& B):name(B.name)
@@ -75,12 +75,12 @@ std::ostream& operator<<(std::ostream& out, const Bureaucrat& b)
 //GradeTooHighException() nested class
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
-    return ("this grade too HIGH\n");
+    return ("this grade is too HIGH\n");
 }
 //GradeTooLowException nested class
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
-    return ("this grade too LOW\n");
+    return ("this grade is too LOW\n");
 }
 
 void    Bureaucrat::signForm(Form& f)

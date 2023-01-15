@@ -1,8 +1,9 @@
 #include "RobotomyRequestForm.hpp"
 
 // OCCF
-RobotomyRequestForm::RobotomyRequestForm(): Form("Default Form", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(): Form("Robotomy Request", 72, 45)
 {
+    target = "Default";
     std::cout << "Robot Default constructor\n";
 }
 
@@ -24,7 +25,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
     std::cout << "Robot Default Destructor\n";
 }
 // param constructor that take target
-RobotomyRequestForm::RobotomyRequestForm(std::string target):Form("Default Form", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(std::string target):Form("Robotomy Request", 72, 45)
 {
     this->target = target;
     std::cout << "Robot param constructor\n";
@@ -38,7 +39,7 @@ const char* RobotomyRequestForm::invalidRobot::what() const throw()
 
 void    RobotomyRequestForm::execute(Bureaucrat const& executor) const
 {
-    if (executor.getGrade() > get_gradeTosign() || executor.getGrade() > get_gradeToExec())
+    if ( get_signed() == false || executor.getGrade() > get_gradeToExec())
           throw invalidRobot();
     srand(time(0));
     int i = rand() % 2;

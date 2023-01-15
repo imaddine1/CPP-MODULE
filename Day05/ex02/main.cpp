@@ -10,6 +10,7 @@ int main()
     {
         Bureaucrat b("Alex", 100);
         ShrubberyCreationForm Sh("home");
+        b.signForm(Sh);
         b.executeForm(Sh);
     }
     catch(const std::exception& e)
@@ -21,6 +22,7 @@ int main()
     {
         Bureaucrat b("Trap", 40);
         RobotomyRequestForm R("New_Robot");
+        b.signForm(R);
         b.executeForm(R);
     }
     catch(const std::exception& e)
@@ -36,6 +38,7 @@ int main()
     {
         Bureaucrat b("Eric", 5);
         PresidentialPardonForm P("Mike");
+        b.signForm(P);
         b.executeForm(P);
     }
     catch(const std::exception& e)

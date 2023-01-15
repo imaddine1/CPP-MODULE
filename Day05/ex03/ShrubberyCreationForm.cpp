@@ -1,23 +1,21 @@
 #include "ShrubberyCreationForm.hpp"
 
 // OCCF
-ShrubberyCreationForm::ShrubberyCreationForm()
+ShrubberyCreationForm::ShrubberyCreationForm():Form("Shrubbery Creation", 145, 137)
 {
     std::cout << "Shrubbery Default constructor\n";
-    name = "Defuatl Shrubbery";
-    sign = 1;
-    exec = 1;
+    target = "Defuatl Shrubbery";
 }
+
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& Sh)
 {
     std::cout << "Shrubbery copy constructor\n";
     *this = Sh;
 }
-const ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& Sh)
+ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& Sh)
 {
+    target = Sh.target;
     std::cout << "Shrubbery assignment operator\n";
-    sign = Sh.sign;
-    exec = Sh.exec;
     return (*this);
 }
 
@@ -26,25 +24,26 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
     std::cout << "Shrubbery Default Destructor\n";
 }
 // param constructor that take target
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target):Form("Shrubbery Creation", 145, 137)
 {
+    this->target = target;
     std::cout << "Shrubbery param constructor\n";
-    name = target;
-    sign = 145;
-    exec = 137;
-}
-//getter
-std::string ShrubberyCreationForm::get_name() const
-{
-    return (name);
 }
 
+// Exception
+const char* ShrubberyCreationForm::invalidShrubbery::what() const throw()
+{
+    return ("ther grade of bereaucrat is not high enough to execute it\n");
+}
+
+// Added for ex02
 void    ShrubberyCreationForm::execute(Bureaucrat const& executor) const
 {
-    if (executor.getGrade() > exec || executor.getGrade() > sign)
-          throw 1;
+    // two function use this 
+    if ( get_signed() == false || executor.getGrade() > get_gradeToExec())
+          throw invalidShrubbery();
 
-    std::string tree = name; 
+    std::string tree = target; 
     std::fstream file;
     
     tree += "_shrubbery";
