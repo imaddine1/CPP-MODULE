@@ -4,12 +4,16 @@ int main()
 {
     try
     {
-        Bureaucrat b("Alex", 119);
+        Bureaucrat Br1("Alex", 119);
         Form f("Business contract", 120 , 110);
-        b.signForm(f);
-        b = Bureaucrat("Joe", 122);
+        std::cout << "********* Display Data *********\n";
+        std::cout << f;
+        Br1.signForm(f);
+        std::cout << "********* Display Data *********\n";
+        std::cout << f;
         // this will throw exception Cause b doesn't have the required grade
-        b.signForm(f);
+        Bureaucrat Br2("Joe", 122);
+        Br2.signForm(f);
     }
     catch(const std::exception& e)
     {

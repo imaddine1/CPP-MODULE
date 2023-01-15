@@ -1,23 +1,22 @@
 #include "Bureaucrat.hpp"
+
 // ****************** create orthodox canonical form ****************
 
-Bureaucrat::Bureaucrat()
+Bureaucrat::Bureaucrat():name("Default")
 {
     std::cout << "Bureaucrat Default constructor\n";
-    name = "Default";
     grade = 1;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat& B)
+Bureaucrat::Bureaucrat(const Bureaucrat& B):name(B.name)
 {
     std::cout << "Bureaucrat Copy constructor\n";
     *this = B;
 }
 
-const Bureaucrat& Bureaucrat::operator=(const Bureaucrat& B)
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat& B)
 {
     std::cout << "Bureaucrat assignment operator\n";
-    name = B.name;
     grade = B.grade;
     return (*this);
 }
@@ -30,11 +29,9 @@ Bureaucrat::~Bureaucrat()
 //************** Required Function ************************
 
 // param constructor
-Bureaucrat::Bureaucrat(std::string _name, long long _grade)
+Bureaucrat::Bureaucrat(std::string _name, long long _grade):name(_name), grade(_grade)
 {
     std::cout << "Bureaucrat param constructor\n";
-    name = _name;
-    grade = _grade;
     if (_grade < 1)
         throw Bureaucrat::GradeTooHighException();
     else if (_grade > 150)
@@ -42,7 +39,7 @@ Bureaucrat::Bureaucrat(std::string _name, long long _grade)
 
 }
 // gettter
-std::string Bureaucrat::getName() const
+const std::string& Bureaucrat::getName() const
 {
     return (name);
 }
@@ -78,12 +75,12 @@ std::ostream& operator<<(std::ostream& out, const Bureaucrat& b)
 //GradeTooHighException() nested class
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
-    return ("this grade too HIGH >> (typed in Bureaucrat param constructor)\n");
+    return ("this grade too HIGH\n");
 }
 //GradeTooLowException nested class
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
-    return ("this grade too LOW >> (typed in Bureaucrat param constructor)\n");
+    return ("this grade too LOW\n");
 }
 
 void    Bureaucrat::signForm(Form& f)
@@ -91,14 +88,13 @@ void    Bureaucrat::signForm(Form& f)
     try
     {
            f.beSigned(*this);
-            std::cout << this->name << " signed " << f.get_name() << std::endl;
+           std::cout << this->name << " signed " << f.get_name() << std::endl;
     }
     catch(const std::exception&)
     {
          std::cout << this->name << " couldn't sign " << f.get_name() << " because my grade is too tow" << std::endl;
     }
 }
-
 // ADDED FOR EX02
 void    Bureaucrat::executeForm(Form const& form)
 {

@@ -3,27 +3,29 @@
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 #include <fstream>
+#include <exception>
 
-class Bureaucrat;
+//class Bureaucrat;
 
 
 class ShrubberyCreationForm : public Form
 {
 private:
-    std::string name;
-    short       sign;
-    short       exec;
+    std::string target;
+    class   invalidShrubbery : public std::exception
+    {
+        const char* what() const throw();
+    };
 public:
     // OCCF
     ShrubberyCreationForm();
     ShrubberyCreationForm(const ShrubberyCreationForm& Sh);
-    const ShrubberyCreationForm& operator=(const ShrubberyCreationForm& Sh);
+    ShrubberyCreationForm& operator=(const ShrubberyCreationForm& Sh);
     ~ShrubberyCreationForm();
     // param constructor that take target
     ShrubberyCreationForm(std::string target);
     // required function
     void    execute(Bureaucrat const& executor) const;
-    std::string get_name() const;
 };
 
 

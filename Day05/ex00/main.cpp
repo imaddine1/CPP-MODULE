@@ -4,8 +4,10 @@ int main()
 {
     try
     {
-        Bureaucrat b("Alex", 1);
+        Bureaucrat b("Alex", 2);
         b.increment();
+        b.decrement();
+        std::cout << b << std::endl;
     }
     catch(const std::exception& e)
     {
@@ -15,14 +17,6 @@ int main()
     /*
         this part it will be work correctly if grade is valid else w'll be aborted
     */
-    std::cout << "++++++++ test without exception ++++++\n";
-    Bureaucrat  B1;
-    Bureaucrat  B2 = B1;
-    B2.decrement();
-    B2.increment();
-    B2.decrement();
-    std::cout << B2 << '\n';
-    std::cout << "++++++++ +++++++++++++++++ ++++++\n";
     std::cout << "********* END OF MAIN ********\n";
     return (0);
 }

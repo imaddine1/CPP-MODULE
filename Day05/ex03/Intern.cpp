@@ -30,7 +30,26 @@ Intern::~Intern()
 
 Form*    Intern::makeForm(std::string nameForm, std::string target)
 {
-    (void)nameForm;
-    (void)target;
-    return (NULL);
+
+	std::string arr[3];
+	arr[0] = "robotomy request";
+	arr[1] = "shrubbery creation";
+	arr[2] = "presidential pardon";
+	int i;
+	for (i = 0; i < 3; i++)
+	{
+		if (nameForm == arr[i])
+			break ;
+	}
+	switch (i)
+	{
+		case 0:
+			return (new RobotomyRequestForm(target));
+		case 1:
+			return (new ShrubberyCreationForm(target));
+		case 2:
+			return (new PresidentialPardonForm(target));
+		default:
+			throw Intern::invalidName();
+	}
 }

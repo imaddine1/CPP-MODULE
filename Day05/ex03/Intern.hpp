@@ -3,13 +3,24 @@
 #include <iostream>
 #include <exception>
 #include "Form.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-class Form;
+//class Form;
+//class RobotomyRequestForm;
 
 class Intern 
 {
+	private:
+	class  invalidName: public std::exception
+	{
+		const char* what() const throw()
+		{
+			return ("the Form name was not found!!\n");
+		}
+	};
 	public:
-		// OCCF
+	// OCCF
 	Intern();
 	Intern(const Intern& B);
 	const Intern& operator=(const Intern& B);

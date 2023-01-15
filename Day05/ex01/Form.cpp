@@ -32,7 +32,7 @@ const char* Form::GradeTooHighException::what() const throw()
     return ("this grade is Too High\n");
 }
     //the nested class GradeTooLowException
-const char* Form::GradeTooLowExcetpion::what() const throw()
+const char* Form::GradeTooLowException::what() const throw()
 {
     return ("this grade is Too Low\n");
 }
@@ -40,27 +40,47 @@ const char* Form::GradeTooLowExcetpion::what() const throw()
 void    Form::beSigned(const Bureaucrat& b)
 {
     if (b.getGrade() > _gradeTosign)
-        throw Bureaucrat::GradeTooLowException();
+        throw GradeTooLowException();
     _signed = true;
 }
 
 // getter
-bool    Form::get_signed()
-{
-    return (_signed);
-}
-
-std::string Form::get_name()
+const std::string&  Form::get_name() const
 {
     return (_name);
 }
+const bool& Form::get_signed() const
+{
+    return (_signed);
+}
+const short&    Form::get_gradeTosign() const
+{
+    return (_gradeTosign);
+}
+const short&    Form::get_gradeToExec() const
+{
+    return (_gradeToExec);
+}
+
 
 // parametherized constructor
 Form::Form(const std::string name, const long long gradeTosign, const long long gradeToExec): _name(name), _gradeTosign(gradeTosign), _gradeToExec(gradeToExec)
 {
+    _signed = false;
     std::cout << "Form param constructor\n";
     if (gradeTosign < 0)
-        throw Bureaucrat::GradeTooHighException();
+        throw GradeTooHighException();
     else if (gradeTosign > 150)
-        throw Bureaucrat::GradeTooLowException();
+        throw GradeTooLowException();
+}
+
+// operator overloading insertion
+std::ostream&   operator<<(std::ostream& out, const Form& f)
+{
+    out << f.get_name();
+    out << " " << f.get_signed();
+    out << " " << f.get_gradeTosign();
+    out << " " << f.get_gradeToExec();
+    out << "\n";
+    return (out);
 }

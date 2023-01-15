@@ -4,9 +4,6 @@
 PresidentialPardonForm::PresidentialPardonForm()
 {
     std::cout << "Presidential Default constructor\n";
-    name = "Defuatl Presidential";
-    sign = 1;
-    exec = 1;
 }
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& Sh)
 {
@@ -16,8 +13,6 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& Sh)
 const PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& Sh)
 {
     std::cout << "Presidential assignment operator\n";
-    sign = Sh.sign;
-    exec = Sh.exec;
     return (*this);
 }
 
@@ -29,19 +24,13 @@ PresidentialPardonForm::~PresidentialPardonForm()
 PresidentialPardonForm::PresidentialPardonForm(std::string target)
 {
     std::cout << "Presidential param constructor\n";
-    name = target;
-    sign = 25;
-    exec = 5;
+
 }
-//getter
-std::string PresidentialPardonForm::get_name() const
-{
-    return (name);
-}
+
 
 void    PresidentialPardonForm::execute(Bureaucrat const& executor) const
 {
-    if (executor.getGrade() > exec || executor.getGrade() > sign)
+    if (executor.getGrade() > get_gradeTosign() || executor.getGrade() > get_gradeToExec())
           throw 1;
-    std::cout << name << " has been pardoned by Zaphod Beeblebrox\n";
+    std::cout << target << " has been pardoned by Zaphod Beeblebrox\n";
 }

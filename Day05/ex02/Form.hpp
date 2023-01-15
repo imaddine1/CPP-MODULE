@@ -12,14 +12,6 @@ private:
     bool 				_signed;
     const				short _gradeTosign;
     const				short _gradeToExec;
-public:
-    // OCCF
-    Form();
-    Form(const Form& f);
-    const Form& operator=(const Form& f);
-    virtual ~Form();
-    // parametherized constructor
-    Form(const std::string, const long long, const long long);
     // the nested Class GradeTooHighException
     class GradeTooHighException : public std::exception
     {
@@ -27,23 +19,31 @@ public:
         const char * what() const throw();
     };
     //the nested class GradeTooLowException
-    class GradeTooLowExcetpion : public std::exception
+    class GradeTooLowException : public std::exception
     {
         public :
         const char * what() const throw();
     };
+public:
+    // OCCF
+    Form();
+    Form(const Form& f);
+    const Form& operator=(const Form& f);
+    ~Form();
+    // parametherized constructor
+    Form(const std::string, const long long, const long long);
 
     // Required function
-    void    beSigned(Bureaucrat& b);
+    void    beSigned(const Bureaucrat& b);
 
     //getter
-    bool    get_signed();
-    virtual    std::string get_name() const;
-    // function required from ex02
-    virtual void    execute(Bureaucrat const& excecutor) const = 0;
+    const std::string&  get_name() const;
+    const bool&         get_signed() const;
+    const short&        get_gradeTosign() const;
+    const short&        get_gradeToExec() const;
 
-    //additonal function for exercise to work very well
-    short   get_gradeToExec();
+    // Added Ex02
+    virtual void    execute(Bureaucrat const& excecutor) const = 0;
 };
 
 std::ostream& operator<<(std::ostream& out, const Form& f);

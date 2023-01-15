@@ -7,39 +7,34 @@
 class Bureaucrat 
 {
 	private:
-		std::string name;
+		const 		std::string name;
 		short       grade;
+		//GradeTooHighException() nested class
+		class GradeTooHighException : public std::exception
+		{
+			public:
+			const char* what() const throw();
+		};
+		//GradeTooLowException nested class
+		class GradeTooLowException : public std::exception
+		{
+			public:
+			const char* what() const throw();
+		};
 	public:
-	//GradeTooHighException() nested class
-	class GradeTooHighException : public std::exception
-	{
-		public:
-		const char* what() const throw();
-	};
-	//GradeTooLowException nested class
-	class GradeTooLowException : public std::exception
-	{
-		public:
-		const char* what() const throw();
-	};
 		// OCCF
-	Bureaucrat();
-	Bureaucrat(const Bureaucrat& B);
-	const Bureaucrat& operator=(const Bureaucrat& B);
-	~Bureaucrat();
-	// Required Function
-	Bureaucrat(std::string _name, long long _grade);
-	std::string getName() const;
-	short       getGrade() const;
-	void        increment();
-	void        decrement();
-	//add function to test is grade valid
-	void        check_grade();
-		//Excecption
+		Bureaucrat();
+		Bureaucrat(const Bureaucrat& B);
+		Bureaucrat& operator=(const Bureaucrat& B);
+		~Bureaucrat();
+		// Required Function
+		Bureaucrat(std::string _name, long long _grade);
+		const std::string& getName() const;
+		short       getGrade() const;
+		void        increment();
+		void        decrement();
 };
 // operator overloading of insertion
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& b);
-
-
 
 #endif

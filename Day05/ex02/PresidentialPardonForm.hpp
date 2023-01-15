@@ -10,9 +10,7 @@ class Bureaucrat;
 class PresidentialPardonForm : public Form
 {
 private:
-    std::string name;
-    short       sign;
-    short       exec;
+    std::string target;
 public:
     // OCCF
     PresidentialPardonForm();
@@ -23,7 +21,6 @@ public:
     PresidentialPardonForm(std::string target);
     // required function
     void    execute(Bureaucrat const& executor) const;
-    std::string get_name() const;
 };
 
 
