@@ -1,0 +1,872 @@
+{
+  "document": {
+    "id": "doc",
+    "name": "New Document",
+    "version": 15.5,
+    "pages": {
+      "page": {
+        "id": "page",
+        "name": "Page 1",
+        "childIndex": 0,
+        "shapes": {},
+        "bindings": {}
+      },
+      "0030561e-6169-45ae-0d13-0e937eeab9d2": {
+        "id": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+        "name": "Page 2",
+        "childIndex": 1,
+        "shapes": {
+          "667b4127-d465-4652-21b3-d6a61ea4d9ce": {
+            "id": "667b4127-d465-4652-21b3-d6a61ea4d9ce",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 1,
+            "point": [
+              2186.08,
+              -214.45
+            ],
+            "rotation": 0,
+            "text": "Casts",
+            "style": {
+              "color": "indigo",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "f8a6aad7-d07b-407f-36a1-66437f5721b6": {
+            "id": "f8a6aad7-d07b-407f-36a1-66437f5721b6",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 2,
+            "point": [
+              1184.03,
+              -97.94
+            ],
+            "rotation": 0,
+            "text": "C++ defines 4 types of casts:",
+            "style": {
+              "color": "white",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.6676463262764634,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "1aa703c9-39f3-4b15-3c77-6fd2bcbc26bd": {
+            "id": "1aa703c9-39f3-4b15-3c77-6fd2bcbc26bd",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 3,
+            "point": [
+              1725.9,
+              -97.41
+            ],
+            "rotation": 0,
+            "text": "static_cast, dynamic_cast, const_cast, reinterpret_cast ",
+            "style": {
+              "color": "lightGray",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.6676463262764634,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "36e9e10b-692e-4f65-079e-828316f5bc9a": {
+            "id": "36e9e10b-692e-4f65-079e-828316f5bc9a",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 3,
+            "point": [
+              1537.92,
+              -30.41
+            ],
+            "rotation": 0,
+            "text": "First of All we'll declare two things that we use it in c/c++ and we don't know the name of this tricks.",
+            "style": {
+              "color": "white",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.36379863052095235,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "13628981-4a60-41ce-0b44-a3f7d656f458": {
+            "id": "13628981-4a60-41ce-0b44-a3f7d656f458",
+            "type": "rectangle",
+            "name": "Rectangle",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 4,
+            "point": [
+              1594.33,
+              30.59
+            ],
+            "size": [
+              299.63,
+              272.95
+            ],
+            "rotation": 0,
+            "style": {
+              "color": "lightGray",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "mono"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "c14e5e95-f55d-4919-0938-22497285dbf6": {
+            "id": "c14e5e95-f55d-4919-0938-22497285dbf6",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 4,
+            "point": [
+              1618.19,
+              70.19
+            ],
+            "rotation": 0,
+            "text": "int a = 10;",
+            "style": {
+              "color": "white",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.36379863052095235,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "8217475e-4b01-4736-1193-19e1cc96d4cb": {
+            "id": "8217475e-4b01-4736-1193-19e1cc96d4cb",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 5,
+            "point": [
+              1615.98,
+              100.34
+            ],
+            "rotation": 0,
+            "text": "float f = a;",
+            "style": {
+              "color": "white",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.36379863052095235,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "375eafed-b275-41c6-3f6d-05cd1cc13ac8": {
+            "id": "375eafed-b275-41c6-3f6d-05cd1cc13ac8",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 5,
+            "point": [
+              1617.44,
+              197.05
+            ],
+            "rotation": 0,
+            "text": "int a = 10;",
+            "style": {
+              "color": "white",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.36379863052095235,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "bf3fb2a8-5eaa-4067-3166-9e0147cf83e1": {
+            "id": "bf3fb2a8-5eaa-4067-3166-9e0147cf83e1",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 6,
+            "point": [
+              1613.93,
+              222.25
+            ],
+            "rotation": 0,
+            "text": "float f = (float)a;",
+            "style": {
+              "color": "white",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.36379863052095235,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "9518cd57-2586-48c4-30fa-69da00ffda7a": {
+            "id": "9518cd57-2586-48c4-30fa-69da00ffda7a",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 5,
+            "point": [
+              1604.75,
+              37.71
+            ],
+            "rotation": 0,
+            "text": "IMPLICIT CAST",
+            "style": {
+              "color": "red",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.5572856058646879,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "941528d1-d194-400e-267f-87552bb9fc64": {
+            "id": "941528d1-d194-400e-267f-87552bb9fc64",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 6,
+            "point": [
+              1602.44,
+              156.07
+            ],
+            "rotation": 0,
+            "text": "EXPLICIT CAST",
+            "style": {
+              "color": "red",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.5572856058646879,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "42ef957c-00dd-47ac-1767-2354dc8829dd": {
+            "id": "42ef957c-00dd-47ac-1767-2354dc8829dd",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 7,
+            "point": [
+              1893.96,
+              142.42
+            ],
+            "rotation": 0,
+            "bend": 0.00001771429787769372,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  0,
+                  10.77
+                ],
+                "canBind": true,
+                "bindingId": "152dac4f-727d-4be2-267c-b27676daae57"
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  116.24,
+                  0
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  58.12,
+                  5.39
+                ]
+              }
+            },
+            "decorations": {
+              "end": "arrow"
+            },
+            "style": {
+              "color": "red",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "mono"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "ae084cb6-6873-45f2-235e-b607ca808312": {
+            "id": "ae084cb6-6873-45f2-235e-b607ca808312",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 8,
+            "point": [
+              2029.54,
+              127.81
+            ],
+            "rotation": 0,
+            "text": "we All know this type of cast and we use it all the time but who know what is called",
+            "style": {
+              "color": "white",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.4010445859872613,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "35da0a28-c59e-4f8a-0b21-2cdeb4a57e4a": {
+            "id": "35da0a28-c59e-4f8a-0b21-2cdeb4a57e4a",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 9,
+            "point": [
+              1598.79,
+              131.14
+            ],
+            "rotation": 0,
+            "text": "//this it's convert automaticly by compiler",
+            "style": {
+              "color": "white",
+              "size": "large",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.11979550308388463,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "dd483225-1cdd-41eb-2422-523068ab66c9": {
+            "id": "dd483225-1cdd-41eb-2422-523068ab66c9",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 10,
+            "point": [
+              1609.09,
+              251.35
+            ],
+            "rotation": 0,
+            "text": "//this tell the compiler to convert it\n and assign it",
+            "style": {
+              "color": "white",
+              "size": "large",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.11979550308388463,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "b9e142ce-0f06-46fa-0de5-b20b778f9510": {
+            "id": "b9e142ce-0f06-46fa-0de5-b20b778f9510",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 11,
+            "point": [
+              1650.64,
+              358.35
+            ],
+            "rotation": 0,
+            "text": "we can use c-style cast, still work fine but with the new concept of c++ (OOP),\n we need to use specific casts to work everything fine.\nwe'll mention each casts what's they do and what he is solution.",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "972af687-5622-4c94-0e64-a622f19961d2": {
+            "id": "972af687-5622-4c94-0e64-a622f19961d2",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 12,
+            "point": [
+              1525.14,
+              481.19
+            ],
+            "rotation": 0,
+            "bend": 0.00001648697167384323,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  567.98,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  0,
+                  147.99
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  283.99,
+                  74
+                ]
+              }
+            },
+            "decorations": {
+              "end": "arrow"
+            },
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "mono"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "32a6d2be-e10b-4a5d-12e2-9cd2f7cf2f54": {
+            "id": "32a6d2be-e10b-4a5d-12e2-9cd2f7cf2f54",
+            "type": "rectangle",
+            "name": "Rectangle",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 13,
+            "point": [
+              1243.43,
+              678.5
+            ],
+            "size": [
+              451.98,
+              598.98
+            ],
+            "rotation": 0,
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "mono"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "79ac5f9f-19b7-4a8a-3221-58638ee72317": {
+            "id": "79ac5f9f-19b7-4a8a-3221-58638ee72317",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 6,
+            "point": [
+              1365.59,
+              641.28
+            ],
+            "rotation": 0,
+            "text": "Static cast",
+            "style": {
+              "color": "red",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.5715308278123539,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "9415d018-3ef8-4ae6-1f0c-d5d5cd775e18": {
+            "id": "9415d018-3ef8-4ae6-1f0c-d5d5cd775e18",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 14,
+            "point": [
+              1246.43,
+              702.44
+            ],
+            "rotation": 0,
+            "text": "this cast is work in the compile time\nso if there a wrong conversion \nthe code it will not compille",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7375043936731105,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "39a99570-ec4e-4d67-0779-e26694920a56": {
+            "id": "39a99570-ec4e-4d67-0779-e26694920a56",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 6,
+            "point": [
+              2117.67,
+              453.46
+            ],
+            "rotation": 0,
+            "text": "EXPLICIT CAST",
+            "style": {
+              "color": "red",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.5572856058646879,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "2c438861-c38a-44d4-152e-03d25cf47927": {
+            "id": "2c438861-c38a-44d4-152e-03d25cf47927",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 15,
+            "point": [
+              1250.48,
+              818.87
+            ],
+            "rotation": 0,
+            "text": "we use this cast to make it more readable",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.6503801423799624,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "c8e64bfc-577c-434b-0d3f-c6736aa7e9b7": {
+            "id": "c8e64bfc-577c-434b-0d3f-c6736aa7e9b7",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 16,
+            "point": [
+              1313.54,
+              857.75
+            ],
+            "rotation": 0,
+            "text": "unlike c-style cast\nwe can't convert pointer of \ndata type to another pointer ",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.6503801423799624,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "8b944514-5ae2-40cd-0764-9a16e7154323": {
+            "id": "8b944514-5ae2-40cd-0764-9a16e7154323",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 17,
+            "point": [
+              1334.33,
+              935.86
+            ],
+            "rotation": 0,
+            "bend": 0,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  45.48,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  0,
+                  70.2
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  22.74,
+                  35.1
+                ]
+              }
+            },
+            "decorations": {
+              "end": "arrow"
+            },
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "mono"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "3ac3402e-3339-4afc-3db4-96950433830b": {
+            "id": "3ac3402e-3339-4afc-3db4-96950433830b",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 18,
+            "point": [
+              1556.2,
+              931.27
+            ],
+            "rotation": 0,
+            "bend": -0.00005725625107756757,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  0,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  35.48,
+                  70.27
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  17.74,
+                  35.14
+                ]
+              }
+            },
+            "decorations": {
+              "end": "arrow"
+            },
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "mono"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "5cab0492-87a2-4dd7-1e51-3d17551fec66": {
+            "id": "5cab0492-87a2-4dd7-1e51-3d17551fec66",
+            "type": "rectangle",
+            "name": "Rectangle",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 19,
+            "point": [
+              1269.13,
+              1044.29
+            ],
+            "size": [
+              168.71,
+              195.8
+            ],
+            "rotation": 0,
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "mono"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "4e181a07-ac6e-409f-2da9-eb56ae4e7150": {
+            "id": "4e181a07-ac6e-409f-2da9-eb56ae4e7150",
+            "type": "rectangle",
+            "name": "Rectangle",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 20,
+            "point": [
+              1485.54,
+              1042.06
+            ],
+            "size": [
+              173.15,
+              198.89
+            ],
+            "rotation": 0,
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "mono"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "b5418b99-bf51-4a03-20f2-91131a9dd9b2": {
+            "id": "b5418b99-bf51-4a03-20f2-91131a9dd9b2",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 21,
+            "point": [
+              1285.6059346153845,
+              1075.0817365384614
+            ],
+            "rotation": 0,
+            "text": "char c = 'a';",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.8974175824175831,
+              "font": "sans",
+              "textAlign": "middle"
+            }
+          },
+          "c70f32bf-bfbe-499d-3f8c-12a1aadc7539": {
+            "id": "c70f32bf-bfbe-499d-3f8c-12a1aadc7539",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 22,
+            "point": [
+              1282.97,
+              1111.87
+            ],
+            "rotation": 0,
+            "text": "int *p;\np = (int*)&c;",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.8974175824175831,
+              "font": "sans",
+              "textAlign": "middle"
+            }
+          }
+        },
+        "bindings": {
+          "152dac4f-727d-4be2-267c-b27676daae57": {
+            "id": "152dac4f-727d-4be2-267c-b27676daae57",
+            "type": "arrow",
+            "fromId": "42ef957c-00dd-47ac-1767-2354dc8829dd",
+            "toId": "13628981-4a60-41ce-0b44-a3f7d656f458",
+            "handleId": "start",
+            "point": [
+              0.5,
+              0.5
+            ],
+            "distance": 16
+          }
+        }
+      }
+    },
+    "pageStates": {
+      "page": {
+        "id": "page",
+        "selectedIds": [
+          "147f9997-d37c-4cbb-0634-9184dc636a3e"
+        ],
+        "camera": {
+          "point": [
+            991.91,
+            -3784.76
+          ],
+          "zoom": 0.25
+        }
+      },
+      "0030561e-6169-45ae-0d13-0e937eeab9d2": {
+        "id": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+        "selectedIds": [],
+        "camera": {
+          "point": [
+            -1156,
+            -422
+          ],
+          "zoom": 1
+        }
+      }
+    },
+    "assets": {}
+  },
+  "assets": {}
+}

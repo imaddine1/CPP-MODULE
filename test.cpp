@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <bitset>
 
 // class test
 // {
@@ -61,12 +62,13 @@
 
 class Base
 {
+
 private:
 protected:
     int m_value ;
 
 public:
-	virtual std::string getName() const { return "Base\n"; }
+	//virtual std::string getName() const { return "Base\n"; }
 	Base()
 	{
 		m_value = -1;
@@ -77,15 +79,20 @@ public:
     {
 		std::cout << "Base parametherized constructor\n";
     }
+	operator std::string()
+    {
+        std::cout << "Conversion Operator" << std::endl;
+        return "this is me";
+    }
 	void	special() {std::cout << "this is special function base class\n";}
     int 	getValue() const { return m_value; }
-	virtual ~Base() {std::cout << "Destructor of Base\n";}
+	//virtual ~Base() {std::cout << "Destructor of Base\n";}
 };
 
 
 class Derived: public Base
 {
-	int a;
+		int a;
 public:
 	Derived()
 	 {a = 0;std::cout << "Defautlt Constructor of Derived is called\n";}
@@ -119,15 +126,47 @@ public:
 	std::string check()  {return "this is Derived_sec\n";}
 };
 
+typedef struct test
+{
+	int a;
+	int b;
+} t;
 
+using namespace std;
+
+
+
+
+class parent{
+	int	a;
+	int	b;
+
+	virtual void func() {std::cout << "im virtual in base \n";}
+};
+
+class child: public parent{
+	int f;
+	void func() {std::cout << "im virtual in child\n";}
+};
 
 int	main()
 {
-    Derived_sec d;
-	Derived b = d;
-    std::cout << "**************\n";
-    std::cout << b.getName();
+    // Derived_sec d;
+	// Derived b = d;
+    // std::cout << "**************\n";
+    // std::cout << b.getName();
     std::cout << "***************\n";
+	// std::cout << "int * == " << sizeof(int  *) << std::endl;
+	// std::cout << "void * == " << sizeof(void *) << std::endl;
+	// std::cout << "char * == " << sizeof(char *) << std::endl;
+	// std::cout << "double * == " << sizeof(double *) << std::endl;
+	// std::cout << "float * == " << sizeof(float *) << std::endl;
+	// std::cout << "bool == " << sizeof(bool) << std::endl;
+
+	char c = 'a';
+
+	int* p = reinterpret_cast<int*>(&c);
+	std::cout << *p << std::endl;
 
 	return (0);
 }
