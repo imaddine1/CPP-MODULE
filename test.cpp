@@ -68,7 +68,7 @@ protected:
     int m_value ;
 
 public:
-	//virtual std::string getName() const { return "Base\n"; }
+	virtual std::string getName() const { return "Base\n"; }
 	Base()
 	{
 		m_value = -1;
@@ -164,9 +164,16 @@ int	main()
 	// std::cout << "bool == " << sizeof(bool) << std::endl;
 
 	char c = 'a';
+	int a = 97;
 
-	int* p = reinterpret_cast<int*>(&c);
-	std::cout << *p << std::endl;
+	Base b;
+
+	void *p = dynamic_cast<void*>(&b);
+
+	//Derived* d2 = dynamic_cast<Derived*>(p);
+
+	//d2->special();
+	std::cout << p << std::endl;
 
 	return (0);
 }

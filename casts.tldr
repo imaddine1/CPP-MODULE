@@ -480,7 +480,7 @@
             ],
             "size": [
               451.98,
-              598.98
+              578.69
             ],
             "rotation": 0,
             "style": {
@@ -757,11 +757,11 @@
             "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
             "childIndex": 20,
             "point": [
-              1485.54,
-              1042.06
+              1440.77,
+              1043.61
             ],
             "size": [
-              173.15,
+              241.23,
               198.89
             ],
             "rotation": 0,
@@ -822,6 +822,619 @@
               "font": "sans",
               "textAlign": "middle"
             }
+          },
+          "315ee0aa-766a-4a4d-25c5-453f9b20809d": {
+            "id": "315ee0aa-766a-4a4d-25c5-453f9b20809d",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 6,
+            "point": [
+              1263.97,
+              1008.7
+            ],
+            "rotation": 0,
+            "text": "explicit c-style cast",
+            "style": {
+              "color": "green",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.48958379897433235,
+              "font": "sans",
+              "textAlign": "middle"
+            }
+          },
+          "c63bd418-8721-4503-36a3-12b93c6da453": {
+            "id": "c63bd418-8721-4503-36a3-12b93c6da453",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 7,
+            "point": [
+              1503.42,
+              1006.66
+            ],
+            "rotation": 0,
+            "text": "static cast",
+            "style": {
+              "color": "green",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.5795198198327243,
+              "font": "sans",
+              "textAlign": "middle"
+            }
+          },
+          "5190b84f-d95b-452b-26cb-eac17111f569": {
+            "id": "5190b84f-d95b-452b-26cb-eac17111f569",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 22,
+            "point": [
+              1505.35,
+              1067.35
+            ],
+            "rotation": 0,
+            "text": "char c = 'a';",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.8974175824175831,
+              "font": "sans",
+              "textAlign": "middle"
+            }
+          },
+          "f70f85ee-3062-4533-0d5b-b6df7dde7a88": {
+            "id": "f70f85ee-3062-4533-0d5b-b6df7dde7a88",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 23,
+            "point": [
+              1454.27,
+              1111.58
+            ],
+            "rotation": 0,
+            "text": "int* p;\np = static_cast<int*>(&a);",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7749841836734696,
+              "font": "sans",
+              "textAlign": "middle"
+            }
+          },
+          "e5d1c137-5d45-48a5-294d-171f09b72881": {
+            "id": "e5d1c137-5d45-48a5-294d-171f09b72881",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 24,
+            "point": [
+              1287.06,
+              1181.76
+            ],
+            "rotation": 0,
+            "text": "compile fine",
+            "style": {
+              "color": "yellow",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7472916666666676,
+              "font": "sans",
+              "textAlign": "middle"
+            }
+          },
+          "b877d7c2-1ef1-4215-026b-3895331458ea": {
+            "id": "b877d7c2-1ef1-4215-026b-3895331458ea",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 25,
+            "point": [
+              1495.38,
+              1176.75
+            ],
+            "rotation": 0,
+            "text": "compile error",
+            "style": {
+              "color": "yellow",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.8067949427846679,
+              "font": "sans",
+              "textAlign": "middle"
+            }
+          },
+          "8ec5485b-89b5-4e87-3286-9cb3505671e6": {
+            "id": "8ec5485b-89b5-4e87-3286-9cb3505671e6",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 26,
+            "point": [
+              2039.34,
+              499.83
+            ],
+            "rotation": 0,
+            "bend": 0.000028744744523297127,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  159.25,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  0,
+                  125.56
+                ],
+                "canBind": true,
+                "bindingId": "d7bef3a3-6715-414e-2600-11dac5aa84a8"
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  79.63,
+                  62.78
+                ]
+              }
+            },
+            "decorations": {
+              "end": "arrow"
+            },
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "sans"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "d84eaa53-b69c-429f-1902-72bcdb81892b": {
+            "id": "d84eaa53-b69c-429f-1902-72bcdb81892b",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 6,
+            "point": [
+              1876.35,
+              633.39
+            ],
+            "rotation": 0,
+            "text": "Dynamic cast",
+            "style": {
+              "color": "red",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.5715308278123539,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "835fd56c-428f-4d59-274d-e9cdd9820573": {
+            "id": "835fd56c-428f-4d59-274d-e9cdd9820573",
+            "type": "rectangle",
+            "name": "Rectangle",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 14,
+            "point": [
+              1705.14,
+              677.3
+            ],
+            "size": [
+              512.1,
+              578.69
+            ],
+            "rotation": 0,
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "mono"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "41ddaac5-6481-45cd-3bcf-f231d01fe176": {
+            "id": "41ddaac5-6481-45cd-3bcf-f231d01fe176",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 14,
+            "point": [
+              1708.12,
+              695.38
+            ],
+            "rotation": 0,
+            "text": "this is work in runtime\nand work only using reference && pointers",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7375043936731105,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "7ac5cd6d-056f-4d25-2e40-262fff7c1617": {
+            "id": "7ac5cd6d-056f-4d25-2e40-262fff7c1617",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 15,
+            "point": [
+              1718.43,
+              760.79
+            ],
+            "rotation": 0,
+            "text": "in case of pointer if conversion faill\n return null to pointer",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7375043936731105,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "eb65bae8-90b8-42a2-360e-3ec9e7503843": {
+            "id": "eb65bae8-90b8-42a2-360e-3ec9e7503843",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 16,
+            "point": [
+              1717.22,
+              825.7
+            ],
+            "rotation": 0,
+            "text": "in case of reference if conversion faill\nthrow exception of type std::bad_exception",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7173693530839406,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "0f13a546-4f9a-4920-39bd-920a1b7eb297": {
+            "id": "0f13a546-4f9a-4920-39bd-920a1b7eb297",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 17,
+            "point": [
+              1721.59,
+              892
+            ],
+            "rotation": 0,
+            "text": "in case of reference if conversion faill\nthrow exception of type std::bad_exception",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7173693530839406,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "1bd3a8b9-a268-4eb2-1a48-c604a53d3b89": {
+            "id": "1bd3a8b9-a268-4eb2-1a48-c604a53d3b89",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 18,
+            "point": [
+              1710.89,
+              961.41
+            ],
+            "rotation": 0,
+            "text": "and can accept only types of class or void*",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7173693530839406,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "bfe8c649-565f-49fa-39a7-5eb17e31c2c5": {
+            "id": "bfe8c649-565f-49fa-39a7-5eb17e31c2c5",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 27,
+            "point": [
+              2049.12,
+              989.49
+            ],
+            "rotation": 0,
+            "bend": -0.00016616815300073823,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  0,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  60.17,
+                  0.01
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  30.09,
+                  0.01
+                ]
+              }
+            },
+            "decorations": {},
+            "style": {
+              "color": "green",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "sans"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "d4924a17-c14f-4a8b-2a8d-d0ca42558ebd": {
+            "id": "d4924a17-c14f-4a8b-2a8d-d0ca42558ebd",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 28,
+            "point": [
+              2149.41,
+              989.92
+            ],
+            "rotation": 0,
+            "bend": -0.00016616815300073823,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  0,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  60.17,
+                  0.01
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  30.09,
+                  0.01
+                ]
+              }
+            },
+            "decorations": {},
+            "style": {
+              "color": "green",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "sans"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "b38e5312-2d0b-455c-0f81-4a71ff71f7ae": {
+            "id": "b38e5312-2d0b-455c-0f81-4a71ff71f7ae",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 19,
+            "point": [
+              1727.86,
+              1011.16
+            ],
+            "rotation": 0,
+            "text": "and can accept only types of class or\nconvert base that have virtual function\n to void*",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7173693530839406,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "97dd0ab0-f6e9-49de-2bec-19e2c43dcf9a": {
+            "id": "97dd0ab0-f6e9-49de-2bec-19e2c43dcf9a",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 20,
+            "point": [
+              1732.89,
+              1093.97
+            ],
+            "rotation": 0,
+            "text": "and can only downcast a base that have \nvirtual function",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7173693530839406,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "1b7203e2-3f94-42dd-3e37-2d8738da5315": {
+            "id": "1b7203e2-3f94-42dd-3e37-2d8738da5315",
+            "type": "rectangle",
+            "name": "Rectangle",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 14,
+            "point": [
+              2241.27,
+              677.97
+            ],
+            "size": [
+              512.1,
+              578.69
+            ],
+            "rotation": 0,
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "mono"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "fe944e39-b27d-486c-16d8-5b0aeb995ad5": {
+            "id": "fe944e39-b27d-486c-16d8-5b0aeb995ad5",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 27,
+            "point": [
+              2238.08,
+              495.71
+            ],
+            "rotation": 0,
+            "bend": -0.00003830121844319445,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  0,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  144.74,
+                  129.77
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  72.37,
+                  64.89
+                ]
+              }
+            },
+            "decorations": {
+              "end": "arrow"
+            },
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "sans"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "01640a5a-2bea-48b2-3098-1a36b25fea5e": {
+            "id": "01640a5a-2bea-48b2-3098-1a36b25fea5e",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 7,
+            "point": [
+              2393.44,
+              632.67
+            ],
+            "rotation": 0,
+            "text": "const_cast",
+            "style": {
+              "color": "red",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.5715308278123539,
+              "font": "mono",
+              "textAlign": "middle"
+            }
           }
         },
         "bindings": {
@@ -836,6 +1449,18 @@
               0.5
             ],
             "distance": 16
+          },
+          "d7bef3a3-6715-414e-2600-11dac5aa84a8": {
+            "id": "d7bef3a3-6715-414e-2600-11dac5aa84a8",
+            "type": "arrow",
+            "fromId": "8ec5485b-89b5-4e87-3286-9cb3505671e6",
+            "toId": "d84eaa53-b69c-429f-1902-72bcdb81892b",
+            "handleId": "end",
+            "point": [
+              0.62,
+              0.57
+            ],
+            "distance": 8
           }
         }
       }
