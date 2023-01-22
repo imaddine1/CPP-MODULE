@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <cmath>
 #include <bitset>
+#include <exception>
 
 // class test
 // {
@@ -140,13 +141,22 @@ using namespace std;
 class parent{
 	int	a;
 	int	b;
-
+	public:
 	virtual void func() {std::cout << "im virtual in base \n";}
 };
 
 class child: public parent{
 	int f;
+	public:
 	void func() {std::cout << "im virtual in child\n";}
+};
+
+class anotherChild : public parent {
+	int ac;
+	public :
+	void func() {
+		std::cout << "im virtual in another child\n";
+	}
 };
 
 int	main()
@@ -163,17 +173,31 @@ int	main()
 	// std::cout << "float * == " << sizeof(float *) << std::endl;
 	// std::cout << "bool == " << sizeof(bool) << std::endl;
 
-	char c = 'a';
-	int a = 97;
+	const int a = 12;
+	const int* cp = &a;
 
-	Base b;
+	int* nP = const_cast<int*>(cp);
 
-	void *p = dynamic_cast<void*>(&b);
+	std::cout << *nP << std::endl;
+
+	(*nP)++;
+	//(*cp)++;
+	*nP = 1337;
+	std::cout << *nP << std::endl;
+	std::cout << a << std::endl;
+
+	std::cout << "ADDRESSES\n";
+	std::cout << nP << std::endl;
+	std::cout << cp << std::endl;
+	std::cout << &a << std::endl;
+
+
+
 
 	//Derived* d2 = dynamic_cast<Derived*>(p);
 
 	//d2->special();
-	std::cout << p << std::endl;
+
 
 	return (0);
 }

@@ -1115,11 +1115,11 @@
             "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
             "childIndex": 16,
             "point": [
-              1717.22,
+              1728.72,
               825.7
             ],
             "rotation": 0,
-            "text": "in case of reference if conversion faill\nthrow exception of type std::bad_exception",
+            "text": "in case of reference if conversion faill\nthrow exception of type std::bad_cast",
             "style": {
               "color": "white",
               "size": "small",
@@ -1137,11 +1137,11 @@
             "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
             "childIndex": 17,
             "point": [
-              1721.59,
+              1733.09,
               892
             ],
             "rotation": 0,
-            "text": "in case of reference if conversion faill\nthrow exception of type std::bad_exception",
+            "text": "in case of reference if conversion faill\nthrow exception of type std::bad_cast",
             "style": {
               "color": "white",
               "size": "small",
@@ -1313,11 +1313,11 @@
             "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
             "childIndex": 20,
             "point": [
-              1732.89,
-              1093.97
+              1731.02,
+              1087.71
             ],
             "rotation": 0,
-            "text": "and can only downcast a base that have \nvirtual function",
+            "text": "can only downcast a base that have \nvirtual function and \n(pointed/referenced) to the same child",
             "style": {
               "color": "white",
               "size": "small",
@@ -1435,6 +1435,292 @@
               "font": "mono",
               "textAlign": "middle"
             }
+          },
+          "d619a19e-5554-46a6-0877-62936dfe7158": {
+            "id": "d619a19e-5554-46a6-0877-62936dfe7158",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 14,
+            "point": [
+              2248.76,
+              708.11
+            ],
+            "rotation": 0,
+            "text": "in this type of conversion we have one case\nshould avoid can cause result of\n undefined behavior",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7118733224157213,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "d52c8913-b3e2-42ee-3378-b3f40efcc24c": {
+            "id": "d52c8913-b3e2-42ee-3378-b3f40efcc24c",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 15,
+            "point": [
+              2247.38,
+              822.09
+            ],
+            "rotation": 0,
+            "text": " const int  a = 1337;",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7118733224157213,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "a1c57940-3665-4154-0722-bedacee9decf": {
+            "id": "a1c57940-3665-4154-0722-bedacee9decf",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 16,
+            "point": [
+              2246.04,
+              859.91
+            ],
+            "rotation": 0,
+            "text": " const int* ptrInt =&a;",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7118733224157213,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "f6738bdf-c0c3-4f70-074e-567fac71bf03": {
+            "id": "f6738bdf-c0c3-4f70-074e-567fac71bf03",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 17,
+            "point": [
+              2244.8,
+              900.51
+            ],
+            "rotation": 0,
+            "text": " const int* p = const_cat<int*>(ptrInt);",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7118733224157213,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "3c415aeb-0b55-4e37-1061-cba04148ea20": {
+            "id": "3c415aeb-0b55-4e37-1061-cba04148ea20",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 18,
+            "point": [
+              2257.64,
+              931.67
+            ],
+            "rotation": 0,
+            "text": "*p = 42;",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7118733224157213,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "dd5b6dc0-0c5b-4f72-06a0-92cb418ca87c": {
+            "id": "dd5b6dc0-0c5b-4f72-06a0-92cb418ca87c",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 19,
+            "point": [
+              2248.31,
+              972.02
+            ],
+            "rotation": 0,
+            "text": "std::cout << *p; // may result undefined behavior",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.6228828795712306,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "427e4b12-2881-4b92-268c-1c3b1ad47a4e": {
+            "id": "427e4b12-2881-4b92-268c-1c3b1ad47a4e",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 16,
+            "point": [
+              2267.35,
+              1056.39
+            ],
+            "rotation": 0,
+            "text": "int  a = 1337;",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7118733224157213,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "121fe3b9-177f-46e2-3def-fc932b7a3a8e": {
+            "id": "121fe3b9-177f-46e2-3def-fc932b7a3a8e",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 17,
+            "point": [
+              2249.03,
+              1091.98
+            ],
+            "rotation": 0,
+            "text": " const int* ptrInt =&a;",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7118733224157213,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "05a381bc-f5b7-4692-0410-7d4ebcab38ed": {
+            "id": "05a381bc-f5b7-4692-0410-7d4ebcab38ed",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 18,
+            "point": [
+              2247.79,
+              1132.58
+            ],
+            "rotation": 0,
+            "text": " const int* p = const_cat<int*>(ptrInt);",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7118733224157213,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "0de1716a-55ff-46f7-26ca-dd76bc106ce8": {
+            "id": "0de1716a-55ff-46f7-26ca-dd76bc106ce8",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 19,
+            "point": [
+              2260.06,
+              1169.66
+            ],
+            "rotation": 0,
+            "text": "*p = 42;",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7118733224157213,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "b8816101-00a3-4416-08e6-127bbd3b0994": {
+            "id": "b8816101-00a3-4416-08e6-127bbd3b0994",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 20,
+            "point": [
+              2251.3,
+              1204.09
+            ],
+            "rotation": 0,
+            "text": "std::cout << *p; // may result undefined behavior",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.6228828795712306,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "b7769860-87ee-44e6-1635-b37c1502f558": {
+            "id": "b7769860-87ee-44e6-1635-b37c1502f558",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 17,
+            "point": [
+              2334.43,
+              1018.24
+            ],
+            "rotation": 0,
+            "text": "Instead You can do this",
+            "style": {
+              "color": "green",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7118733224157213,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "8f9612b9-48de-4f30-28a7-d60d55b568f3": {
+            "id": "8f9612b9-48de-4f30-28a7-d60d55b568f3",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 16,
+            "point": [
+              2273.3,
+              780.32
+            ],
+            "rotation": 0,
+            "text": "drop the constness is called cast away",
+            "style": {
+              "color": "green",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7118733224157213,
+              "font": "mono",
+              "textAlign": "middle"
+            }
           }
         },
         "bindings": {
@@ -1463,6 +1749,13 @@
             "distance": 8
           }
         }
+      },
+      "ab0ef9ed-df10-4282-1542-51457fabef40": {
+        "id": "ab0ef9ed-df10-4282-1542-51457fabef40",
+        "name": "Page 1 Copy",
+        "childIndex": 0,
+        "shapes": {},
+        "bindings": {}
       }
     },
     "pageStates": {
@@ -1481,6 +1774,21 @@
       },
       "0030561e-6169-45ae-0d13-0e937eeab9d2": {
         "id": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+        "selectedIds": [],
+        "camera": {
+          "point": [
+            -1156,
+            -422
+          ],
+          "zoom": 1
+        }
+      },
+      "ab0ef9ed-df10-4282-1542-51457fabef40": {
+        "id": "ab0ef9ed-df10-4282-1542-51457fabef40",
+        "name": "Page 1",
+        "childIndex": 0,
+        "shapes": {},
+        "bindings": {},
         "selectedIds": [],
         "camera": {
           "point": [
