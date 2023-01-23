@@ -111,7 +111,7 @@ public:
 };
 
 
-class Derived_sec: public Derived
+class Derived_sec: public Base
 {
 	int a;
 public:
@@ -122,7 +122,7 @@ public:
 		m_value = value;
     }
 
-    std::string getName() const;// { return "Derived_sec\n"; }
+    std::string getName() const { return "Derived_sec\n"; }
     int getValueDoubled() const { return m_value * 2; }
 	std::string check()  {return "this is Derived_sec\n";}
 };
@@ -173,31 +173,25 @@ int	main()
 	// std::cout << "float * == " << sizeof(float *) << std::endl;
 	// std::cout << "bool == " << sizeof(bool) << std::endl;
 
-	const int a = 12;
-	const int* cp = &a;
+	//parent	p;
 
-	int* nP = const_cast<int*>(cp);
-
-	std::cout << *nP << std::endl;
-
-	(*nP)++;
-	//(*cp)++;
-	*nP = 1337;
-	std::cout << *nP << std::endl;
-	std::cout << a << std::endl;
-
-	std::cout << "ADDRESSES\n";
-	std::cout << nP << std::endl;
-	std::cout << cp << std::endl;
-	std::cout << &a << std::endl;
-
-
-
+	//Derived* conv = reinterpret_cast<Derived*>(&p);
+	//conv->getName();
 
 	//Derived* d2 = dynamic_cast<Derived*>(p);
 
 	//d2->special();
+	Derived	d;
+	Base*	p = &d;
+ 
 
-
+	Derived* d2 = dynamic_cast<Derived*>(p);
+	if(!d2)
+	{
+		std::cout << "im not who seaching for\n";
+	}
+	else
+		std::cout << d2 << std::endl;
+	std::cout << &d << std::endl;
 	return (0);
 }

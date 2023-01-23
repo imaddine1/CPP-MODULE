@@ -1721,6 +1721,145 @@
               "font": "mono",
               "textAlign": "middle"
             }
+          },
+          "a372788f-2687-48f2-334f-132e23817f26": {
+            "id": "a372788f-2687-48f2-334f-132e23817f26",
+            "type": "rectangle",
+            "name": "Rectangle",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 14,
+            "point": [
+              2778.25,
+              680.67
+            ],
+            "size": [
+              512.1,
+              578.69
+            ],
+            "rotation": 0,
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 1,
+              "font": "mono"
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "551caeeb-225e-4bba-3027-118290c24543": {
+            "id": "551caeeb-225e-4bba-3027-118290c24543",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 8,
+            "point": [
+              2892.16,
+              638.36
+            ],
+            "rotation": 0,
+            "text": "reinterpret_cast",
+            "style": {
+              "color": "red",
+              "size": "medium",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.5715308278123539,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "9c0bc70e-60d1-43a4-2711-f03e4e473c9c": {
+            "id": "9c0bc70e-60d1-43a4-2711-f03e4e473c9c",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 14,
+            "point": [
+              2788.12,
+              719.61
+            ],
+            "rotation": 0,
+            "text": "this is the dangerous one, you need to work\nwith it carefully",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.7118733224157213,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "d8a179b5-57a2-4819-38ff-01f3500cd90e": {
+            "id": "d8a179b5-57a2-4819-38ff-01f3500cd90e",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 15,
+            "point": [
+              2782.24,
+              800.49
+            ],
+            "rotation": 0,
+            "text": "he copy the bytes from data types to another one \nwithout care\nif the values is converted correctly",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.6339278586372,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "0998dd2c-e6e4-4d81-3bc1-3ee55e3ca879": {
+            "id": "0998dd2c-e6e4-4d81-3bc1-3ee55e3ca879",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 16,
+            "point": [
+              2814.17,
+              893.66
+            ],
+            "rotation": 0,
+            "text": "he converts pointer/reference to data types",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.6339278586372,
+              "font": "mono",
+              "textAlign": "middle"
+            }
+          },
+          "79a0d3cb-264c-4d4f-377a-d00e2c493780": {
+            "id": "79a0d3cb-264c-4d4f-377a-d00e2c493780",
+            "type": "text",
+            "name": "Text",
+            "parentId": "0030561e-6169-45ae-0d13-0e937eeab9d2",
+            "childIndex": 17,
+            "point": [
+              2785.12,
+              956.28
+            ],
+            "rotation": 0,
+            "text": "it can convert any pointer to another data types",
+            "style": {
+              "color": "white",
+              "size": "small",
+              "isFilled": false,
+              "dash": "solid",
+              "scale": 0.6339278586372,
+              "font": "mono",
+              "textAlign": "middle"
+            }
           }
         },
         "bindings": {
