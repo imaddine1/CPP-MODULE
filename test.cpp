@@ -181,17 +181,19 @@ int	main()
 	//Derived* d2 = dynamic_cast<Derived*>(p);
 
 	//d2->special();
-	Derived	d;
-	Base*	p = &d;
- 
-
-	Derived* d2 = dynamic_cast<Derived*>(p);
-	if(!d2)
+	try
 	{
-		std::cout << "im not who seaching for\n";
-	}
-	else
-		std::cout << d2 << std::endl;
+		Derived	d;
+		Base&	p = d;
+		Derived_sec& d2 = dynamic_cast<Derived_sec&>(p);
+		std::cout << &d2 << std::endl;
 	std::cout << &d << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
+
 	return (0);
 }

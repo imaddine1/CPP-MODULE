@@ -2,8 +2,13 @@
 
 int main()
 {
-    Base*  bs  = generate();
+    Base*   bp = generate();
 
-    identify(bs);
+    std::cout << "************ USING POINTER ***********\n";
+    identify(bp);
+    std::cout << "************ USING REFERENCE ***********\n";
+
+    Base&   br = *(generate());
+    identify(br);
     return (0);
 }
