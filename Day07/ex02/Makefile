@@ -1,5 +1,5 @@
 NAME = Array
-SRC =  main.cpp Array.cpp
+SRC =  main.cpp
 CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 OBJ = $(SRC:.cpp=.o)
 

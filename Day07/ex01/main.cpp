@@ -6,7 +6,7 @@ int main()
     int arrI[] = {7, 9, 8 , 6, 3};
     int size = sizeof(arrI) / sizeof(arrI[0]);
     iter(arrI, size, print);
-    std::cout << "*********** DOUBLE *************\n";
+    std::cout << "*********** INTEGER *************\n";
     double arrD[] = {7.15, 8.12, 9.26 , 6.47, 3.51};
     size = sizeof(arrD) / sizeof(arrD[0]);
     iter(arrD, size, print);
@@ -20,3 +20,4 @@ int main()
     iter(arrS, size, print);
     return (0);
 }
+

@@ -1,7 +1,4 @@
 #include "Array.hpp"
-#include "Array.cpp"
-
-
 
 void    test_for_prove()
 {
@@ -46,6 +43,21 @@ void    test_for_prove()
         Array<double> a(4);
 
         a.setValue(14.25);
+        a.printData();
+        std::cout << a.size() << std::endl;
+        std::cout << a[1] << std::endl;
+
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << "error: " << e.what() << '\n';
+    }
+    std::cout << "************ String TEST ***************\n";
+    try
+    {
+        Array<std::string> a(4);
+
+        a.setValue("TCHECK");
         a.printData();
         std::cout << a.size() << std::endl;
         std::cout << a[1] << std::endl;
