@@ -10,10 +10,11 @@ Array<T>::Array()
 }
 
 template<typename T>
-Array<T>::Array(Array<T>& arr)
+Array<T>::Array(Array<T>& oldArr)
 {
     std::cout << "copy constructor is called\n";
-    *this = arr;
+    arr = new T[0];
+    *this = oldArr;
 }
 
 template<typename T>
@@ -52,16 +53,16 @@ int Array<T>::size()
 }
 
 template<typename T>
-T   Array<T>::operator[](unsigned int index)
+T   Array<T>::operator[](int index)
 {
-    if (index >= _size)
+    if (index >= _size || index < 0)
         throw std::out_of_range("The index is out of bound");
     return (arr[index]);
 }
 
 // OPTIONAL
 template<typename T>
-void Array<T>::setValue(int val)
+void Array<T>::setValue(T val)
 {
     for (int i = 0; i < _size; i++)
         arr[i] = val;
@@ -74,3 +75,4 @@ void Array<T>::printData()
         std::cout << arr[i] << " |";
     std::cout << "\n";
 }
+

@@ -18,10 +18,10 @@ class Array
         // REQUIRED
         Array(unsigned int n);
         int size();
-        T   operator[](unsigned int index);
         // OPTIONAL
-        void    setValue(int val);
+        void    setValue(T val);
         void    printData();
+        T   operator[](int index);
 };
 
 
