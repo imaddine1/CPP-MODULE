@@ -68,6 +68,11 @@
 		"__functional_base_03": "cpp",
 		"__cxx_version": "cpp",
 		"filesystem": "cpp",
-		"cfloat": "cpp"
+		"cfloat": "cpp",
+		"list": "cpp",
+		"__tree": "cpp",
+		"forward_list": "cpp",
+		"map": "cpp",
+		"set": "cpp"
 	}
 }
