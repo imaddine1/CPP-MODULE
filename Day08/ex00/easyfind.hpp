@@ -9,19 +9,16 @@
 #include <set>
 #include <map>
 
-template<typename T, typename U>
-void    easyfind(const T& Cont, U nb)
+template<typename T>
+void    easyfind(const T& Cont, typename T::value_type nb)
 {
     typename T::const_iterator it;
-    for (it = Cont.begin(); it != Cont.end(); it++)
-    {
-        if (*it == nb)
-        {
-            std::cout << "The number is " << nb << std::endl;
-            return ;
-        }
-    }
-    throw 1;
+
+    it  = std::find(Cont.begin(), Cont.end(), nb);
+    if (it != Cont.end())
+        std::cout << "The number is: " << nb << std::endl;
+    else
+        throw 1;
 }
 
 #endif

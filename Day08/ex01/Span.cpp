@@ -19,6 +19,7 @@ Span& Span::operator=(const Span& sp)
     std::cout << "copy assignment is called\n";
     _size = sp._size;
     this->vec = sp.vec;
+    _init = sp._init;
     return (*this);
 }
 
@@ -52,12 +53,13 @@ long long     Span::shortestSpan() const
         throw "++ no span can be found ++";
     long long min = LLONG_MAX;
     unsigned int i = 0;
-    int sub;
+    long long sub;
+
+    std::vector<int>    vec1 = vec;    
+    std::sort(vec1.begin(), vec1.end(), std::greater<int>());
     while (i < _size - 1)
     {
-        sub = vec[i] - vec[i + 1];
-        if (sub < 0)
-            sub *= (-1);
+        sub = vec1[i] - vec1[i + 1];
         if (sub < min)
             min = sub;
         i++;
@@ -69,19 +71,10 @@ long long Span::longestSpan() const
 {
     if (_init <= 1)
         throw "++ no span can be found ++";
-    long long max = LLONG_MIN;
-    unsigned int i = 0;
-    int sub;
-    while (i < _size - 1)
-    {
-        sub = vec[i] - vec[i + 1];
-        if (sub < 0)
-            sub *= (-1);
-        if (sub > max)
-            max = sub;
-        i++;
-    }
-    return (max);
+
+    std::vector<int>    vec1 = vec;    
+    std::sort(vec1.begin(), vec1.end());
+    return (static_cast<long long> (vec1[_size - 1]) - vec1[0]);
 }
 
 // FOR OPTIONAL TEST

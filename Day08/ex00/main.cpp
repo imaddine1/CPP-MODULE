@@ -76,7 +76,7 @@ int main()
         s.insert(11);
         s.insert(12);
 
-        easyfind(s, 5);
+        easyfind(s, 12);
     }
     catch(int)
     {

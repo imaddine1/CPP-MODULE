@@ -5,6 +5,10 @@
 #include <iterator>
 #include <ctime>
 #include <list>
+#include <algorithm>
+#include <functional>
+
+
 
 class Span
 {
