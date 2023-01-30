@@ -76,15 +76,12 @@ int main()
         s.insert(11);
         s.insert(12);
 
-        easyfind(s, 7);
+        easyfind(s, 5);
     }
     catch(int)
     {
         std::cout << "The number is not found\n";
     }
 
-
-
-
-
+    return (0);
 }

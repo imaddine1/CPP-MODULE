@@ -7,6 +7,7 @@
 #include <forward_list>
 #include <list>
 #include <set>
+#include <map>
 
 template<typename T, typename U>
 void    easyfind(const T& Cont, U nb)

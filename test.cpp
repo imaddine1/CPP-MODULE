@@ -4,6 +4,7 @@
 #include <bitset>
 #include <exception>
 #include <stdexcept>
+#include <vector>
 
 
 // class test
@@ -254,19 +255,25 @@ class Array{
 int	main()
 {
 
-	try
-	{
-		Array<int>	a(4);
-		std::cout << a.size() << std::endl;
-		Array<int>	b = a;
+	// try
+	// {
+	// 	Array<int>	a(4);
+	// 	std::cout << a.size() << std::endl;
+	// 	Array<int>	b = a;
 
-		b.elementByindex(5);
-	}
-	catch (std::exception& e)
-	{
-		std::cerr << "error: "<< e.what() << std::endl;
-	}
+	// 	b.elementByindex(5);
+	// }
+	// catch (std::exception& e)
+	// {
+	// 	std::cerr << "error: "<< e.what() << std::endl;
+	// }
+	std::vector<int> vec;
 
+	for (int i = 0; i < 33; i++)
+	{
+		vec.push_back(i);
+		std::cout << "size = " << vec.size() << " " << "capacity = " << vec.capacity() << std::endl;
+	}
 
 	//system ("leaks a.out");
 	return (0);
