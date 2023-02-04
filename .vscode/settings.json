@@ -73,6 +73,7 @@
 		"__tree": "cpp",
 		"forward_list": "cpp",
 		"map": "cpp",
-		"set": "cpp"
+		"set": "cpp",
+		"memory_resource": "cpp"
 	}
 }

@@ -50,38 +50,8 @@ int main()
     {
         std::cout << "The number is not found\n";
     }
-    std::cout << "******* TEST USING LIST *************\n";
-    try 
-    {
-        std::list<int> lst;
-        lst.push_back(4);
-        lst.push_back(5);
-        lst.push_back(6);
-        lst.push_back(11);
 
-        easyfind(lst, 6);
-    }
-    catch(int)
-    {
-        std::cout << "The number is not found\n";
-    }
-    std::cout << "******* TEST USING SET *************\n";
-    try 
-    {
-        std::set<int> s;
 
-        s.insert(4);
-        s.insert(5);
-        s.insert(6);
-        s.insert(11);
-        s.insert(12);
-
-        easyfind(s, 12);
-    }
-    catch(int)
-    {
-        std::cout << "The number is not found\n";
-    }
 
     return (0);
 }

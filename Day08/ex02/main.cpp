@@ -3,6 +3,8 @@
 
 int main()
 {
+
+    std::cout << "************ TEST FROM SUBJECT ***********\n";   
     MutantStack<int> mstack;
     mstack.push(5);
     mstack.push(17);
@@ -12,7 +14,6 @@ int main()
     mstack.push(3);
     mstack.push(5);
     mstack.push(737);
-    //[...]
     mstack.push(0);
     MutantStack<int>::iterator it = mstack.begin();
     MutantStack<int>::iterator ite = mstack.end();
@@ -47,11 +48,24 @@ int main()
     ++it1;
     }
 
-    std::cout << "******** OPTIONAL TEST ************\n";
-    MutantStack<int> copy;
-    copy = mstack;
-    std::cout <<    copy.size() << std::endl;
-    std::cout << copy.top() << std::endl; 
+   std::cout << "************ TEST WITH REVERSE ***********\n";
+    MutantStack<int> mstack2;
+    mstack2.push(5);
+    mstack2.push(17);
+    mstack2.push(3);
+    mstack2.push(5);
+    mstack2.push(737);
+    mstack2.push(0);
+    MutantStack<int>::reverse_iterator it2 = mstack2.rbegin();
+    MutantStack<int>::reverse_iterator ite2 = mstack2.rend();
+    ++it2;
+    --it2;
+    while (it2 != ite2)
+    {
+    std::cout << *it2 << std::endl;
+    ++it2;
+    }
+
     return 0;
 }
 
